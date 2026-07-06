@@ -1,0 +1,61 @@
+@theme {
+  /* Paper & graphite palette */
+  --color-paper: #ddd4c8;
+  --color-paper-warm: #d4cabf;
+  --color-paper-shadow: #c5bbb0;
+  --color-sketch-desk: #b8aa98;
+  --color-sketch-line: rgba(148, 158, 172, 0.32);
+  --color-sketch-margin: rgba(214, 142, 132, 0.42);
+  --color-sketch-binding: rgba(120, 100, 80, 0.08);
+  --color-graphite: #2c2c2c;
+  --color-graphite-light: #5a5a5a;
+  --color-graphite-faint: #9a9590;
+  --color-beige: #d4cfc7;
+  --color-accent: #4a6741;
+  --color-accent-warm: #c4714a;
+  --color-blush: #e8cfc0;
+  --color-sage-wash: #c8dcc4;
+  --color-peach: #f2d8c8;
+  --color-sky: #c4dae8;
+  --color-butter: #f0e4b8;
+  --color-coral: #e8a898;
+  --color-tape-cream: #ebe4d4;
+  --color-note: #faf0d4;
+
+  /* Dark mode — warm kraft paper */
+  --color-paper-dark: #242018;
+  --color-paper-warm-dark: #2c2820;
+  --color-paper-shadow-dark: #1a1712;
+  --color-sketch-desk-dark: #100e0c;
+  --color-sketch-line-dark: rgba(110, 105, 95, 0.28);
+  --color-sketch-margin-dark: rgba(170, 95, 85, 0.32);
+  --color-sketch-binding-dark: rgba(0, 0, 0, 0.18);
+  --color-graphite-dark: #e8e4df;
+  --color-graphite-light-dark: #b8b4ae;
+  --color-graphite-faint-dark: #6a6560;
+  --color-beige-dark: #3a3835;
+  --color-accent-dark: #8fb085;
+  --color-accent-warm-dark: #d4906a;
+  --color-blush-dark: #4a3d38;
+  --color-sage-wash-dark: #2e3830;
+  --color-peach-dark: #4a4038;
+  --color-sky-dark: #2a3840;
+  --color-butter-dark: #454038;
+  --color-coral-dark: #503a34;
+  --color-tape-cream-dark: #3a3835;
+  --color-note-dark: #3a3828;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+
+  /* Spacing scale */
+  --spacing-page: clamp(2rem, 6vw, 5rem);
+  --content-max: 40rem;
+
+  /* Motion */
+  --ease-premium: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 700ms;
+}
