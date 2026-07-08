@@ -2,58 +2,32 @@ import { motion } from 'framer-motion'
 import { heroItem, heroStagger } from '@/animations/hero'
 import { ScrapbookCollage } from '@/components/scrapbook/ScrapbookCollage'
 
-const ROLE_CHIPS = [
-  { label: 'Product Design', bg: 'var(--color-sage-wash)', text: 'var(--color-accent)' },
-  { label: 'Research', bg: 'var(--color-blush)', text: 'var(--color-accent-warm)' },
-  { label: 'Art', bg: 'var(--color-sky)', text: '#5a7a8a' },
-] as const
-
 export function HeroSpread() {
   return (
-    <div className="relative min-h-screen px-[var(--spacing-page)] pb-28 pt-[clamp(5rem,12vh,7rem)]">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
-        {/* Copy */}
-        <motion.div variants={heroStagger} initial="hidden" animate="visible">
-          <motion.div variants={heroItem} className="flex flex-wrap gap-2">
-            {ROLE_CHIPS.map((chip) => (
-              <span
-                key={chip.label}
-                className="rounded-full px-3 py-1 text-[0.625rem] font-medium tracking-wide"
-                style={{
-                  backgroundColor: `color-mix(in srgb, ${chip.bg} 70%, white)`,
-                  color: chip.text,
-                }}
-              >
-                {chip.label}
-              </span>
-            ))}
+    <div className="relative min-h-screen overflow-hidden px-[var(--spacing-page)]">
+      <div className="mx-auto flex min-h-screen max-w-6xl items-center justify-center">
+        <div className="relative z-20 flex w-full items-center justify-center gap-12 lg:gap-20">
+          <motion.div variants={heroStagger} initial="hidden" animate="visible" className="max-w-xl">
+            <motion.h1
+              variants={heroItem}
+              className="mt-2 whitespace-nowrap text-[clamp(2.8rem,7vw,5.6rem)] leading-[0.9] tracking-[0.01em] text-black"
+              style={{ fontFamily: 'var(--font-hero-name)' }}
+            >
+              Anagha Kamath
+            </motion.h1>
+
+            <motion.p
+              variants={heroItem}
+              className="mt-4 max-w-xl text-[0.8rem] leading-relaxed tracking-[0.01em] text-[var(--color-ink-muted)]"
+              style={{ fontFamily: 'var(--font-hero-support)' }}
+            >
+              UX designer and researcher at UCSD’s Design Lab and Systems Neuroscience Lab, marketing director at DS3, and an artist + dancer blending creativity with craft.
+            </motion.p>
           </motion.div>
 
-          <motion.h1 variants={heroItem} className="text-display mt-8">
-            Hi, I&apos;m{' '}
-            <span className="bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-warm)] bg-clip-text text-transparent">
-              Anagha
-            </span>
-            .
-          </motion.h1>
-
-          <motion.div
-            variants={heroItem}
-            className="mt-8 h-px w-16 bg-gradient-to-r from-[var(--color-accent)] via-[var(--color-accent-warm)]/60 to-transparent"
-          />
-
-          <motion.p variants={heroItem} className="text-lead mt-8 max-w-md">
-            I explore how thoughtful design shapes the way people think, create, and connect.
-          </motion.p>
-
-          <motion.p variants={heroItem} className="text-quiet mt-4 max-w-sm">
-            Every project starts as a sketch.
-          </motion.p>
-        </motion.div>
-
-        {/* Scrapbook collage */}
-        <div className="pointer-events-none relative">
-          <ScrapbookCollage />
+          <div className="pointer-events-none h-[72vh] w-[42vw] max-w-[34rem]">
+            <ScrapbookCollage />
+          </div>
         </div>
       </div>
 

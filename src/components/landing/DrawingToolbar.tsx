@@ -39,14 +39,15 @@ export function DrawingToolbar({
 
   return (
     <motion.div
-      className="fixed bottom-8 left-1/2 z-[55] -translate-x-1/2"
+      className="fixed bottom-8 left-6 z-[55]"
       variants={toolbarVariants}
       initial="hidden"
       animate="visible"
-      role="toolbar"
-      aria-label="Drawing tools"
     >
-      <div className="flex items-center gap-0.5 rounded-2xl border border-black/[0.06] bg-[var(--color-paper)]/75 px-2 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-xl dark:border-white/[0.06] dark:bg-[var(--color-paper-warm-dark)]/75 dark:shadow-[0_8px_32px_rgba(0,0,0,0.35)]">
+      <p className="mb-2 text-center text-[0.75rem] font-medium tracking-[0.01em] text-[var(--color-ink-muted)]">
+        every idea starts as just a sketch - try it out for yourself
+      </p>
+      <div className="flex items-center gap-0.5 rounded-2xl border border-[var(--color-window-border)] bg-[var(--color-paper)]/98 px-2 py-2 shadow-[0_12px_34px_rgba(32,22,14,0.18)] backdrop-blur-xl">
         <div className="flex items-center gap-1 px-1.5" role="group" aria-label="Colors">
           {palette.map((c) => (
             <button
@@ -55,7 +56,7 @@ export function DrawingToolbar({
               onClick={() => onColorChange(c.id)}
               className={`h-5 w-5 rounded-full transition-all duration-300 ${
                 colorId === c.id && mode !== 'eraser'
-                  ? 'ring-2 ring-[var(--color-graphite)]/30 ring-offset-1 dark:ring-[var(--color-graphite-dark)]/30'
+                  ? 'ring-2 ring-[var(--color-ink)]/35 ring-offset-1'
                   : 'hover:scale-110'
               }`}
               style={{ backgroundColor: c.value }}
@@ -89,7 +90,7 @@ export function DrawingToolbar({
 }
 
 function Divider() {
-  return <div className="mx-1 h-4 w-px bg-black/[0.06] dark:bg-white/[0.08]" />
+  return <div className="mx-1 h-4 w-px bg-[var(--color-window-border)]" />
 }
 
 function ToolbarButton({
@@ -112,8 +113,8 @@ function ToolbarButton({
       disabled={disabled}
       className={`flex h-8 w-8 items-center justify-center rounded-xl transition-all duration-300 ${
         active
-          ? 'bg-[var(--color-graphite)] text-[var(--color-paper)] dark:bg-[var(--color-graphite-dark)] dark:text-[var(--color-paper-dark)]'
-          : 'text-[var(--color-graphite-faint)] hover:bg-black/[0.04] hover:text-[var(--color-graphite)] disabled:opacity-25 dark:text-[var(--color-graphite-faint-dark)] dark:hover:bg-white/[0.06] dark:hover:text-[var(--color-graphite-dark)]'
+          ? 'bg-[var(--color-ink)] text-[var(--color-paper)]'
+          : 'text-[var(--color-ink-muted)] hover:bg-[var(--color-sage-wash)]/55 hover:text-[var(--color-ink)] disabled:opacity-35'
       }`}
       aria-label={label}
       aria-pressed={active}

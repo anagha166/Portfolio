@@ -14,7 +14,7 @@ type InitialPosition =
   | { x: number; y: number }
 
 export interface StickerPeelProps {
-  imageSrc: string
+  color?: string
   rotate?: number
   peelBackHoverPct?: number
   peelBackActivePct?: number
@@ -29,7 +29,7 @@ export interface StickerPeelProps {
 }
 
 export default function StickerPeel({
-  imageSrc,
+  color = '#6f8f78',
   rotate = 30,
   peelBackHoverPct = 30,
   peelBackActivePct = 40,
@@ -193,6 +193,7 @@ export default function StickerPeel({
         '--sticker-peel-easing': peelEasing,
         '--sticker-peel-hover-easing': peelHoverEasing,
         '--sticker-width': `${width}px`,
+        '--sticker-color': color,
         '--sticker-shadow-opacity': shadowIntensity,
         '--sticker-lighting-constant': lightingIntensity,
         '--peel-direction': `${peelDirection}deg`,
@@ -208,6 +209,7 @@ export default function StickerPeel({
       peelEasing,
       peelHoverEasing,
       width,
+      color,
       shadowIntensity,
       lightingIntensity,
       peelDirection,
@@ -274,25 +276,13 @@ export default function StickerPeel({
       <div className="sticker-container" ref={containerRef}>
         <div className="sticker-main">
           <div className="sticker-lighting">
-            <img
-              src={imageSrc}
-              alt=""
-              className="sticker-image"
-              draggable={false}
-              onContextMenu={(e) => e.preventDefault()}
-            />
+            <div className="sticker-star" aria-hidden="true" />
           </div>
         </div>
 
         <div className="flap">
           <div className="flap-lighting">
-            <img
-              src={imageSrc}
-              alt=""
-              className="flap-image"
-              draggable={false}
-              onContextMenu={(e) => e.preventDefault()}
-            />
+            <div className="flap-star" aria-hidden="true" />
           </div>
         </div>
       </div>

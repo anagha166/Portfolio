@@ -22,7 +22,7 @@ export function StickerLayer() {
         return (
           <StickerPeel
             key={sticker.id}
-            imageSrc={sticker.imageSrc}
+            color={sticker.color}
             width={sticker.width}
             rotate={sticker.rotate}
             peelDirection={sticker.peelDirection}
