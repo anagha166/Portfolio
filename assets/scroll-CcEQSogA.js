@@ -1,0 +1,1 @@
+import{n as e}from"./index-B90quVh0.js";var t={hidden:{opacity:0,y:40},visible:{opacity:1,y:0,transition:{duration:.7,ease:e}}};export{t};
