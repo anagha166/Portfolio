@@ -1,5 +1,3 @@
-import anaghaPortrait from '../assets/photos/Photoshoot.jpg'
-
 export interface ScrapbookPhotoItem {
   id: string
   src: string
@@ -20,7 +18,7 @@ export interface ScrapbookPhotoItem {
 export const HERO_SCRAPBOOK_PHOTOS: ScrapbookPhotoItem[] = [
   {
     id: 'portrait-main',
-    src: anaghaPortrait,
+    src: 'linear-gradient(155deg, #f7f1ea 0%, #e7dacc 55%, #cebca8 100%)',
     alt: 'Portrait — Anagha',
     caption: 'Anagha · Oakland',
     rotate: 3,
@@ -34,7 +32,7 @@ export const HERO_SCRAPBOOK_PHOTOS: ScrapbookPhotoItem[] = [
   },
   {
     id: 'sketching',
-    src: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=360&h=280&fit=crop',
+    src: 'linear-gradient(140deg, #f8f2e7 0%, #ead7b1 45%, #cfb07c 100%)',
     alt: 'Sketching at the desk',
     caption: 'Every project starts here',
     rotate: -7,
@@ -48,7 +46,7 @@ export const HERO_SCRAPBOOK_PHOTOS: ScrapbookPhotoItem[] = [
   },
   {
     id: 'workspace',
-    src: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=320&h=240&fit=crop',
+    src: 'linear-gradient(145deg, #edf3f7 0%, #d5e0e8 52%, #bac9d4 100%)',
     alt: 'Research notes and workspace',
     caption: 'Field notes',
     rotate: 5,

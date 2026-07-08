@@ -14,12 +14,41 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  :root {
+    --color-paper: #ffffff;
+    --color-paper-warm: #ffffff;
+    --color-sketch-desk: #ffffff;
+    --color-graphite: #000000;
+    --color-graphite-light: #000000;
+    --color-graphite-faint: #000000;
+    --color-accent: #5f7a61;
+    --color-sage-wash: #d9e5d6;
+    --color-butter: #ece4d3;
+    --color-blush: #e8dfcf;
+    --color-sky: #dce7de;
+    --color-coral: #d4c1ad;
+    --color-note: #ffffff;
+    --color-ink: #000000;
+    --color-ink-muted: #000000;
+    --color-ink-faint: #000000;
+    --color-window-border: #b8ab98;
+    --color-border: #cec3b2;
+    --color-surface: #ffffff;
+    --color-highlight: #d9e5d6;
+    --color-pink-hot: #5f7a61;
+    --color-sage: #000000;
+  }
+
   body {
     margin: 0;
     font-family: var(--font-sans);
-    background-color: var(--color-sketch-desk);
-    color: var(--color-graphite);
+    background-color: #ffffff;
+    color: #000000;
     overflow-x: hidden;
+  }
+
+  body :is(h1, h2, h3, h4, h5, h6, p, span, a, li, dt, dd, button, label, small) {
+    color: #000000 !important;
   }
 
   .dark body,

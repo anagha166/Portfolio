@@ -1,11 +1,7 @@
-import pencilImg from '@/assets/stickers/pencil.svg'
-import coffeeImg from '@/assets/stickers/coffee.svg'
-import compassImg from '@/assets/stickers/compass.svg'
-
 export interface StickerPlacement {
   id: string
   label: string
-  imageSrc: string
+  color: string
   /** Viewport position percent */
   x: number
   y: number
@@ -22,7 +18,7 @@ export const STICKER_PLACEMENTS: StickerPlacement[] = [
   {
     id: 'pencil',
     label: 'Pencil',
-    imageSrc: pencilImg,
+    color: '#6f8f78',
     x: 2,
     y: 14,
     rotate: -10,
@@ -35,7 +31,7 @@ export const STICKER_PLACEMENTS: StickerPlacement[] = [
   {
     id: 'coffee',
     label: 'Coffee',
-    imageSrc: coffeeImg,
+    color: '#a06a68',
     x: 93,
     y: 12,
     rotate: 8,
@@ -48,7 +44,7 @@ export const STICKER_PLACEMENTS: StickerPlacement[] = [
   {
     id: 'compass',
     label: 'Compass',
-    imageSrc: compassImg,
+    color: '#6f87a7',
     x: 94,
     y: 88,
     rotate: 12,
@@ -57,6 +53,32 @@ export const STICKER_PLACEMENTS: StickerPlacement[] = [
     peelBackHoverPct: 18,
     peelBackActivePct: 32,
     shadowIntensity: 0.4,
+  },
+  {
+    id: 'fern',
+    label: 'Fern',
+    color: '#7e9a82',
+    x: 8,
+    y: 82,
+    rotate: -7,
+    width: 64,
+    peelDirection: 140,
+    peelBackHoverPct: 18,
+    peelBackActivePct: 32,
+    shadowIntensity: 0.42,
+  },
+  {
+    id: 'berry',
+    label: 'Berry',
+    color: '#9a6f79',
+    x: 82,
+    y: 56,
+    rotate: 5,
+    width: 62,
+    peelDirection: 280,
+    peelBackHoverPct: 18,
+    peelBackActivePct: 32,
+    shadowIntensity: 0.42,
   },
 ]
 

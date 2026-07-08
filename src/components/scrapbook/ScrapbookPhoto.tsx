@@ -10,6 +10,7 @@ interface ScrapbookPhotoProps {
 
 export function ScrapbookPhoto({ photo, delay = 0 }: ScrapbookPhotoProps) {
   const tint = photo.tint ?? 'var(--color-blush)'
+  const isGradient = photo.src.startsWith('linear-gradient')
 
   return (
     <motion.figure
@@ -41,13 +42,22 @@ export function ScrapbookPhoto({ photo, delay = 0 }: ScrapbookPhotoProps) {
         )}
 
         <div className="overflow-hidden rounded-[1px] bg-[#f0ebe4]">
-          <img
-            src={photo.src}
-            alt={photo.alt}
-            className="aspect-[4/5] w-full object-cover saturate-[1.12] contrast-[1.03] brightness-[1.02]"
-            loading="lazy"
-            draggable={false}
-          />
+          {isGradient ? (
+            <div
+              className="aspect-[4/5] w-full saturate-[1.12] contrast-[1.03] brightness-[1.02]"
+              style={{ background: photo.src }}
+              role="img"
+              aria-label={photo.alt}
+            />
+          ) : (
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              className="aspect-[4/5] w-full object-cover saturate-[1.12] contrast-[1.03] brightness-[1.02]"
+              loading="lazy"
+              draggable={false}
+            />
+          )}
         </div>
 
         {photo.caption && (

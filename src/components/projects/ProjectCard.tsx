@@ -17,37 +17,17 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       viewport={{ once: true, margin: '-5%' }}
       transition={{ delay: index * 0.08 }}
     >
-      <Link to={`/projects/${project.slug}`} className="group block">
+      <Link to={`/projects/${project.slug}`} className="group block" aria-label={project.title}>
         <div
-          className="relative aspect-[16/10] overflow-hidden rounded-sm shadow-[0_2px_24px_rgba(0,0,0,0.05)] transition-all duration-500 group-hover:shadow-[0_12px_48px_rgba(0,0,0,0.1)] dark:shadow-[0_2px_24px_rgba(0,0,0,0.3)] dark:group-hover:shadow-[0_12px_48px_rgba(0,0,0,0.5)]"
+          className="relative aspect-[4/3] overflow-hidden rounded-sm border border-[var(--color-window-border)] shadow-[0_2px_16px_rgba(0,0,0,0.06)] transition-all duration-400 group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.16)]"
           style={{ background: project.image }}
         >
-          <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/[0.03] dark:group-hover:bg-black/10" />
-        </div>
-
-        <div className="mt-6 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-          <div>
-            <h2 className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-medium tracking-tight text-[var(--color-graphite)] transition-colors group-hover:text-[var(--color-accent)] dark:text-[var(--color-graphite-dark)] dark:group-hover:text-[var(--color-accent-dark)]">
+          <div className="absolute inset-0 bg-black/5 transition-colors duration-300 group-hover:bg-black/45" />
+          <div className="absolute inset-x-0 bottom-0 p-4">
+            <h2 className="translate-y-2 text-lg font-medium tracking-tight text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
               {project.title}
             </h2>
-            <p className="mt-1 text-sm text-[var(--color-graphite-faint)] dark:text-[var(--color-graphite-faint-dark)]">
-              {project.role} · {project.timeline}
-            </p>
           </div>
-          <p className="max-w-sm text-[var(--color-graphite-light)] leading-relaxed md:text-right dark:text-[var(--color-graphite-light-dark)]">
-            {project.impact}
-          </p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full border border-[var(--color-beige)] px-3 py-1 text-xs tracking-wide text-[var(--color-graphite-faint)] dark:border-[var(--color-beige-dark)] dark:text-[var(--color-graphite-faint-dark)]"
-            >
-              {tag}
-            </span>
-          ))}
         </div>
       </Link>
     </motion.article>
