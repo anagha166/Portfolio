@@ -1,0 +1,1 @@
+function e(e){return e.startsWith(`linear-gradient`)||e.startsWith(`radial-gradient`)||e.startsWith(`conic-gradient`)||e.startsWith(`#`)||e.startsWith(`rgb`)||e.startsWith(`hsl`)}export{e as t};
