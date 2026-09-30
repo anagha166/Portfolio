@@ -37,10 +37,10 @@ export function ServeSection() {
                 >
                   <p className="font-semibold text-[var(--color-ink)]">{item.role}</p>
                   <p className="mt-0.5 text-[0.75rem] text-[var(--color-ink-faint)]">
-                    {item.organization} · {item.period}
+                    {item.company} · {item.period}
                   </p>
                   <p className="mt-1.5 leading-relaxed text-[var(--color-ink-muted)]">
-                    {item.summary}
+                    {item.points[0]}
                   </p>
                 </li>
               ))}

@@ -27,7 +27,7 @@ const pillars = [
 
 export function ApproachSpread() {
   return (
-    <div className="flex min-h-screen flex-col justify-center px-[var(--spacing-page)] py-32">
+    <div className="flex flex-col justify-center px-[var(--spacing-page)] py-20 md:py-28">
       <motion.div
         variants={spreadVariants}
         initial="hidden"

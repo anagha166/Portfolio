@@ -1,4 +1,5 @@
 export type DrawingMode = 'pencil' | 'eraser'
+export type CursorMode = 'default' | 'link' | 'view' | 'draw'
 
 export interface Point {
   x: number
@@ -27,6 +28,10 @@ export interface ProjectSummary {
   impact: string
   image: string
   tags: string[]
+  imageFit?: 'cover' | 'contain'
+  featured?: boolean
+  outcomeShort?: string
+  roleContext?: string
 }
 
 export interface StickerPlacement {

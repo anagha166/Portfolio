@@ -5,7 +5,7 @@ import { SectionEyebrow, SectionTitle } from '@/components/ui/SectionTypography'
 
 export function ConnectSpread() {
   return (
-    <div className="flex min-h-screen flex-col justify-center px-[var(--spacing-page)] py-32">
+    <div className="flex flex-col justify-center px-[var(--spacing-page)] py-20 md:py-28">
       <motion.div
         variants={spreadVariants}
         initial="hidden"
@@ -21,30 +21,22 @@ export function ConnectSpread() {
         </p>
 
         <div className="mt-12 flex flex-wrap gap-4">
-          <Link
-            to="/contact"
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=anaghakamath@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-[var(--color-graphite)] px-7 py-3 text-[0.8125rem] font-medium tracking-wide text-[var(--color-paper)] transition-opacity duration-300 hover:opacity-80 dark:bg-[var(--color-graphite-dark)] dark:text-[var(--color-paper-dark)]"
           >
             Get in touch
-          </Link>
+          </a>
           <Link
-            to="/resume"
+            to="/projects"
             className="inline-flex items-center rounded-full border border-black/[0.08] px-7 py-3 text-[0.8125rem] font-medium tracking-wide text-[var(--color-graphite)] transition-colors duration-300 hover:border-black/[0.15] dark:border-white/[0.1] dark:text-[var(--color-graphite-dark)] dark:hover:border-white/[0.2]"
           >
-            View resume
+            View projects
           </Link>
         </div>
       </motion.div>
-
-      <motion.footer
-        className="mt-auto pt-24 text-micro"
-        variants={spreadVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <p>© {new Date().getFullYear()} Anagha Kamath</p>
-      </motion.footer>
     </div>
   )
 }

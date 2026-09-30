@@ -24,12 +24,14 @@ export function ConnectSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <Link
-            to="/contact"
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=anaghakamath@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center bg-[var(--color-graphite)] px-8 py-3.5 text-[0.8125rem] font-medium tracking-wide text-[var(--color-surface)] transition-opacity duration-300 hover:opacity-85"
           >
             Get in touch
-          </Link>
+          </a>
           <Link
             to="/about"
             className="inline-flex items-center border border-[var(--color-beige)] px-8 py-3.5 text-[0.8125rem] font-medium tracking-wide text-[var(--color-graphite)] transition-colors duration-300 hover:border-[var(--color-graphite)]/20"

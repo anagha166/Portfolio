@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import type { CaseStudyImage } from '@/types/caseStudy'
 import { fadeTransition } from '@/animations/transitions'
+import { isCssBackground } from '@/utils/media'
 
 interface BeforeAfterProps {
   before: CaseStudyImage
@@ -21,12 +22,18 @@ export function BeforeAfter({ before, after }: BeforeAfterProps) {
           <p className="mb-3 text-xs font-medium tracking-[0.15em] text-[var(--color-graphite-faint)] uppercase dark:text-[var(--color-graphite-faint-dark)]">
             {i === 0 ? 'Before' : 'After'}
           </p>
-          <div
-            className="aspect-[4/3] w-full rounded-sm shadow-[0_2px_16px_rgba(0,0,0,0.05)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)]"
-            style={{ background: image.src }}
-            role="img"
-            aria-label={image.alt}
-          />
+          <div className="aspect-[4/3] w-full overflow-hidden rounded-sm bg-black shadow-[0_2px_16px_rgba(0,0,0,0.05)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
+            {isCssBackground(image.src) ? (
+              <div
+                className="h-full w-full"
+                style={{ background: image.src }}
+                role="img"
+                aria-label={image.alt}
+              />
+            ) : (
+              <img src={image.src} alt={image.alt} className="h-full w-full object-cover" />
+            )}
+          </div>
         </motion.figure>
       ))}
     </div>

@@ -21,10 +21,10 @@ const accents = [
 export const researchItems: ResearchItem[] = experienceItems.map((item, i) => ({
   id: item.id,
   title: item.role,
-  institution: item.organization,
+  institution: item.company,
   period: item.period,
-  summary: item.summary,
-  methods: item.highlights.slice(0, 2).map((h) => h.split(',')[0].slice(0, 40)),
+  summary: item.points[0] ?? '',
+  methods: item.points.slice(0, 2).map((h) => h.split(',')[0].slice(0, 40)),
   accent: accents[i % accents.length],
 }))
 

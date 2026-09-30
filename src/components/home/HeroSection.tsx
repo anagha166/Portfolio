@@ -24,8 +24,8 @@ export function HeroSection() {
             <a href="#work" className="btn-primary" data-cursor="link">
               View Work
             </a>
-            <Link to="/resume" className="btn-secondary" data-cursor="link">
-              Resume
+            <Link to="/about" className="btn-secondary" data-cursor="link">
+              About
             </Link>
           </div>
         </div>

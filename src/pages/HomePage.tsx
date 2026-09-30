@@ -4,11 +4,12 @@
 import { SketchbookSpread } from '@/components/sketchbook/SketchbookSpread'
 import { HeroSpread } from '@/components/home/HeroSpread'
 import { FeaturedWorkSpread } from '@/components/home/FeaturedWorkSpread'
+import { StudioSpread } from '@/components/home/StudioSpread'
 import { ApproachSpread } from '@/components/home/ApproachSpread'
 import { ConnectSpread } from '@/components/home/ConnectSpread'
 // import { useDrawingEngine } from '@/hooks/useDrawingEngine'
 
-const TOTAL_PAGES = 4
+const TOTAL_PAGES = 5
 
 export function HomePage() {
   // const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -28,7 +29,7 @@ export function HomePage() {
   //   useDrawingEngine(canvasRef, { enabled: showDrawingTools })
 
   return (
-    <div className="relative">
+    <div className="paper-surface relative">
       {/* Drawing feature temporarily disabled */}
       {/* {showDrawingTools && (
         <div className="pointer-events-none fixed inset-0 z-[20]">
@@ -60,10 +61,14 @@ export function HomePage() {
       </SketchbookSpread>
 
       <SketchbookSpread index={2} total={TOTAL_PAGES}>
-        <ApproachSpread />
+        <StudioSpread />
       </SketchbookSpread>
 
       <SketchbookSpread index={3} total={TOTAL_PAGES}>
+        <ApproachSpread />
+      </SketchbookSpread>
+
+      <SketchbookSpread index={4} total={TOTAL_PAGES}>
         <ConnectSpread />
       </SketchbookSpread>
     </div>

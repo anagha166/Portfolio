@@ -11,14 +11,14 @@ const ProjectsPage = lazy(() =>
 const AboutPage = lazy(() =>
   import('@/pages/AboutPage').then((m) => ({ default: m.AboutPage })),
 )
-const ResumePage = lazy(() =>
-  import('@/pages/ResumePage').then((m) => ({ default: m.ResumePage })),
-)
 const ContactPage = lazy(() =>
   import('@/pages/ContactPage').then((m) => ({ default: m.ContactPage })),
 )
 const CaseStudyPage = lazy(() =>
   import('@/pages/CaseStudyPage').then((m) => ({ default: m.CaseStudyPage })),
+)
+const StudioPage = lazy(() =>
+  import('@/pages/StudioPage').then((m) => ({ default: m.StudioPage })),
 )
 
 function PageLoader() {
@@ -38,8 +38,8 @@ export default function App() {
             <Route index element={<HomePage />} />
             <Route path="projects" element={<ProjectsPage />} />
             <Route path="projects/:slug" element={<CaseStudyPage />} />
+            <Route path="studio" element={<StudioPage />} />
             <Route path="about" element={<AboutPage />} />
-            <Route path="resume" element={<ResumePage />} />
             <Route path="contact" element={<ContactPage />} />
           </Route>
         </Routes>

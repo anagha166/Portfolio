@@ -5,7 +5,6 @@ import type { NavItem } from '@/types'
 const navItems: NavItem[] = [
   { label: 'Case Studies', path: '/#work' },
   { label: 'About', path: '/about' },
-  { label: 'Resume', path: '/resume' },
 ]
 
 export function SiteNav() {

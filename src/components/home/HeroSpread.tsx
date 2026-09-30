@@ -6,11 +6,16 @@ export function HeroSpread() {
   return (
     <div className="relative min-h-screen overflow-hidden px-[var(--spacing-page)]">
       <div className="mx-auto flex min-h-screen max-w-6xl items-center justify-center">
-        <div className="relative z-20 flex w-full items-center justify-center gap-12 lg:gap-20">
-          <motion.div variants={heroStagger} initial="hidden" animate="visible" className="max-w-xl">
+        <div className="relative z-20 flex w-full flex-col items-center justify-center gap-10 pt-16 md:pt-0 lg:flex-row lg:gap-20">
+          <motion.div
+            variants={heroStagger}
+            initial="hidden"
+            animate="visible"
+            className="w-full max-w-xl text-center lg:text-left"
+          >
             <motion.h1
               variants={heroItem}
-              className="mt-2 whitespace-nowrap text-[clamp(2.8rem,7vw,5.6rem)] leading-[0.9] tracking-[0.01em] text-black"
+              className="mt-2 text-[clamp(2.2rem,7vw,5.6rem)] leading-[0.9] tracking-[0.01em] text-black lg:whitespace-nowrap"
               style={{ fontFamily: 'var(--font-hero-name)' }}
             >
               Anagha Kamath
@@ -21,11 +26,11 @@ export function HeroSpread() {
               className="mt-4 max-w-xl text-[0.8rem] leading-relaxed tracking-[0.01em] text-[var(--color-ink-muted)]"
               style={{ fontFamily: 'var(--font-hero-support)' }}
             >
-              UX designer and researcher at UCSD’s Design Lab and Systems Neuroscience Lab, marketing director at DS3, and an artist + dancer blending creativity with craft.
+              UX Designer & Researcher @ UCSD Design Lab • 3D World Building @ UCSD Systems Neuroscience Lab • Marketing @ UCSD DS3 • Design @ ChartR • Artist • Dancer • Foodie
             </motion.p>
           </motion.div>
 
-          <div className="pointer-events-none h-[72vh] w-[42vw] max-w-[34rem]">
+          <div className="pointer-events-none mx-auto flex h-[min(42vh,360px)] w-full max-w-md items-center justify-center lg:mx-0 lg:h-[72vh] lg:w-[42vw] lg:max-w-[34rem]">
             <ScrapbookCollage />
           </div>
         </div>

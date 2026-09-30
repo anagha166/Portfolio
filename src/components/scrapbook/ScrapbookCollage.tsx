@@ -12,7 +12,7 @@ export function ScrapbookCollage() {
       >
         <video
           src={heroVideo}
-          className="h-full w-full object-contain object-right"
+          className="h-full w-full object-contain object-center lg:object-right"
           autoPlay
           loop
           muted

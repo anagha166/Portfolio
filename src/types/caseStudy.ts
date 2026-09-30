@@ -7,6 +7,8 @@ export interface CaseStudyImage {
   src: string
   alt: string
   caption?: string
+  /** cover crops to fill; contain shows the full image (use for tall phone mockups) */
+  fit?: 'cover' | 'contain'
 }
 
 export interface CaseStudySection {
@@ -32,7 +34,10 @@ export interface CaseStudy {
   impact: string
   tags: string[]
   heroImage: string
+  /** How the hero/thumbnail should fit. Use contain for device mockups with transparent backgrounds. */
+  imageFit?: 'cover' | 'contain'
   accentColor?: string
+  externalUrl?: string
   sections: CaseStudySection[]
   reflection: string[]
   lessonsLearned: string[]

@@ -51,6 +51,15 @@
     color: #000000 !important;
   }
 
+  .site-footer :is(p, span, a, small),
+  .site-footer .site-footer-icon {
+    color: #ffffff !important;
+  }
+
+  .site-footer svg {
+    fill: currentColor;
+  }
+
   .dark body,
   body.dark {
     background-color: var(--color-sketch-desk-dark);
@@ -90,6 +99,12 @@
       1px 0 0 rgba(0, 0, 0, 0.03),
       2px 6px 28px rgba(80, 60, 40, 0.07),
       6px 16px 48px rgba(80, 60, 40, 0.05);
+  }
+
+  /* Continuous page surface — no per-section seams */
+  .paper-surface {
+    background-color: var(--color-paper);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   }
 
   .dark .paper-texture {
@@ -235,5 +250,47 @@
 
   .dark .scrapbook-caption {
     color: var(--color-graphite-faint-dark);
+  }
+
+  .project-carousel {
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 4%, black 90%, transparent);
+  }
+
+  .project-carousel-track {
+    display: flex;
+    width: max-content;
+    gap: 2rem;
+    animation: project-carousel 45s linear infinite;
+  }
+
+  .project-carousel:hover .project-carousel-track {
+    animation-play-state: paused;
+  }
+
+  @media (min-width: 768px) {
+    .project-carousel-track {
+      gap: 2.75rem;
+    }
+  }
+
+  @keyframes project-carousel {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-carousel-track {
+      animation: none;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 }

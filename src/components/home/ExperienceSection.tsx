@@ -45,10 +45,10 @@ export function ExperienceSection() {
                   {item.role}
                 </h3>
                 <p className="mt-1 text-sm text-neutral-400">
-                  {item.organization} · {item.period}
+                  {item.company} · {item.period}
                 </p>
                 <p className="mt-3 max-w-xl text-[0.9375rem] leading-relaxed text-neutral-600">
-                  {item.summary}
+                  {item.points[0]}
                 </p>
               </motion.li>
             ))}
