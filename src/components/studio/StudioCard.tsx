@@ -47,9 +47,6 @@ export function StudioCard({ piece, index = 0, onOpen }: StudioCardProps) {
       <p className="mt-3 text-sm font-medium tracking-tight text-[var(--color-graphite)]">
         {piece.title}
       </p>
-      <p className="mt-1 text-xs leading-relaxed text-[var(--color-graphite-faint)]">
-        {piece.caption}
-      </p>
     </motion.button>
   )
 }

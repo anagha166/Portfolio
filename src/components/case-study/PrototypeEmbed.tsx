@@ -5,8 +5,8 @@ interface PrototypeEmbedProps {
 
 export function PrototypeEmbed({ url, title = 'Interactive prototype' }: PrototypeEmbedProps) {
   return (
-    <div className="my-10">
-      <div className="aspect-[16/10] w-full overflow-hidden rounded-sm border border-[var(--color-beige)] shadow-[0_2px_20px_rgba(0,0,0,0.06)] dark:border-[var(--color-beige-dark)] dark:shadow-[0_2px_20px_rgba(0,0,0,0.3)]">
+    <div className="my-12">
+      <div className="aspect-[16/10] w-full overflow-hidden border border-black/10">
         <iframe
           src={url}
           title={title}
@@ -15,14 +15,14 @@ export function PrototypeEmbed({ url, title = 'Interactive prototype' }: Prototy
           allowFullScreen
         />
       </div>
-      <p className="mt-3 text-center text-sm text-[var(--color-graphite-faint)] dark:text-[var(--color-graphite-faint-dark)]">
+      <p className="mt-3 text-sm text-black/45">
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-colors hover:text-[var(--color-accent)] dark:hover:text-[var(--color-accent-dark)]"
+          className="underline decoration-black/20 underline-offset-4 transition-colors hover:text-black hover:decoration-black/50"
         >
-          Open prototype in new tab →
+          Open prototype in a new tab
         </a>
       </p>
     </div>

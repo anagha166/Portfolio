@@ -252,45 +252,4 @@
     color: var(--color-graphite-faint-dark);
   }
 
-  .project-carousel {
-    overflow: hidden;
-    width: 100%;
-    mask-image: linear-gradient(to right, transparent, black 4%, black 90%, transparent);
-  }
-
-  .project-carousel-track {
-    display: flex;
-    width: max-content;
-    gap: 2rem;
-    animation: project-carousel 45s linear infinite;
-  }
-
-  .project-carousel:hover .project-carousel-track {
-    animation-play-state: paused;
-  }
-
-  @media (min-width: 768px) {
-    .project-carousel-track {
-      gap: 2.75rem;
-    }
-  }
-
-  @keyframes project-carousel {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(-50%);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .project-carousel-track {
-      animation: none;
-      flex-wrap: wrap;
-      width: 100%;
-      max-width: 100%;
-    }
-  }
 }

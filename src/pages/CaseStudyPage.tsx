@@ -12,43 +12,77 @@ export function CaseStudyPage() {
 
   if (!study) return <Navigate to="/projects" replace />
 
-  const tocItems = study.sections.map((s) => ({ id: s.id, title: s.title }))
+  const tocItems = [
+    ...study.sections.map((s) => ({ id: s.id, title: s.title })),
+    ...(study.reflection.length > 0 ? [{ id: 'reflection', title: 'Reflection' }] : []),
+    ...(study.lessonsLearned.length > 0
+      ? [{ id: 'lessons', title: 'What I took away' }]
+      : []),
+  ]
 
   return (
     <motion.article
-      className="paper-texture min-h-screen px-[var(--spacing-page)] pt-28 pb-32"
-      variants={pageVariants}
-      initial="initial"
-      animate="animate"
+      className="relative min-h-screen px-[var(--spacing-page)] pt-28 pb-32"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.6 } }}
     >
       <div className="mx-auto max-w-6xl">
         <CaseStudyHero study={study} />
 
-        <div className="mt-20 grid gap-16 lg:grid-cols-[200px_1fr]">
+        <div className="mt-24 grid gap-12 lg:grid-cols-[11rem_minmax(0,1fr)] lg:gap-16">
           <StickyTOC items={tocItems} />
 
-          <div className="max-w-2xl space-y-24">
+          <div className="min-w-0 max-w-4xl space-y-20">
             {study.sections.map((section) => (
               <CaseStudySection key={section.id} section={section} />
             ))}
 
-            {/* Lessons Learned */}
-            <section id="lessons-learned" className="scroll-mt-32 border-t border-[var(--color-beige)] pt-16 dark:border-[var(--color-beige-dark)]">
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-light tracking-tight text-[var(--color-graphite)] dark:text-[var(--color-graphite-dark)]">
-                Lessons Learned
-              </h2>
-              <ul className="mt-6 space-y-4">
-                {study.lessonsLearned.map((lesson) => (
-                  <li
-                    key={lesson}
-                    className="flex gap-3 text-[var(--color-graphite-light)] leading-relaxed dark:text-[var(--color-graphite-light-dark)]"
-                  >
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)]" />
-                    {lesson}
-                  </li>
-                ))}
-              </ul>
-            </section>
+            {study.reflection.length > 0 && (
+              <section id="reflection" className="scroll-mt-32 border-t border-black/10 pt-16">
+                <h2
+                  className="text-[clamp(1.375rem,2.5vw,1.75rem)] font-normal tracking-tight"
+                  style={{ fontFamily: 'var(--font-hero-name)' }}
+                >
+                  Reflection
+                </h2>
+                <div className="mt-6 space-y-5">
+                  {study.reflection.map((paragraph) => (
+                    <p
+                      key={paragraph.slice(0, 40)}
+                      className="max-w-[38rem] text-[1.0625rem] leading-[1.75] text-black/75"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {study.lessonsLearned.length > 0 && (
+              <section id="lessons" className="scroll-mt-32 border-t border-black/10 pt-16">
+                <h2
+                  className="text-[clamp(1.375rem,2.5vw,1.75rem)] font-normal tracking-tight"
+                  style={{ fontFamily: 'var(--font-hero-name)' }}
+                >
+                  What I took away
+                </h2>
+                <ol className="mt-8 space-y-6">
+                  {study.lessonsLearned.map((lesson, i) => (
+                    <li key={lesson} className="flex gap-5">
+                      <span
+                        className="w-6 shrink-0 pt-0.5 text-sm text-black/35"
+                        style={{ fontFamily: 'var(--font-hero-name)' }}
+                      >
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <p className="max-w-[34rem] text-[1.0625rem] leading-[1.75] text-black/75">
+                        {lesson}
+                      </p>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            )}
           </div>
         </div>
       </div>

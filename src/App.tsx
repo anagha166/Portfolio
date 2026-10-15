@@ -20,6 +20,12 @@ const CaseStudyPage = lazy(() =>
 const StudioPage = lazy(() =>
   import('@/pages/StudioPage').then((m) => ({ default: m.StudioPage })),
 )
+const BrandingPage = lazy(() =>
+  import('@/pages/BrandingPage').then((m) => ({ default: m.BrandingPage })),
+)
+const BrandingOrgPage = lazy(() =>
+  import('@/pages/BrandingOrgPage').then((m) => ({ default: m.BrandingOrgPage })),
+)
 
 function PageLoader() {
   return (
@@ -38,6 +44,8 @@ export default function App() {
             <Route index element={<HomePage />} />
             <Route path="projects" element={<ProjectsPage />} />
             <Route path="projects/:slug" element={<CaseStudyPage />} />
+            <Route path="branding" element={<BrandingPage />} />
+            <Route path="branding/:slug" element={<BrandingOrgPage />} />
             <Route path="studio" element={<StudioPage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="contact" element={<ContactPage />} />

@@ -6,6 +6,7 @@ import type { NavItem } from '@/types'
 
 const navItems: NavItem[] = [
   { label: 'Case Studies', path: '/projects' },
+  { label: 'Branding / Marketing', path: '/branding' },
   { label: 'Studio', path: '/studio' },
   { label: 'About', path: '/about' },
 ]
@@ -21,9 +22,10 @@ function NavLinkItem({ item, onNavigate }: { item: NavItem; onNavigate?: () => v
       className="relative block px-1 py-2 text-[0.8125rem] tracking-wide md:py-1"
     >
       {({ isActive: linkActive }) => {
-        const isProjectsChild =
-          item.path === '/projects' && location.pathname.startsWith('/projects')
-        const active = linkActive || isProjectsChild
+        const isSectionChild =
+          (item.path === '/projects' && location.pathname.startsWith('/projects')) ||
+          (item.path === '/branding' && location.pathname.startsWith('/branding'))
+        const active = linkActive || isSectionChild
 
         return (
           <>

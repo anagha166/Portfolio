@@ -53,7 +53,7 @@ export function FeaturedSection() {
                     {project.title}
                   </h3>
                   <p className="mt-2 text-caption">
-                    {project.role} · {project.timeline}
+                    {project.timeline.match(/\d{4}(?:\s*[–-]\s*\d{4})?/)?.[0] ?? project.timeline}
                   </p>
                   <p className="text-body-lg mt-4 line-clamp-2 text-[var(--color-graphite-muted)]">
                     {project.impact}

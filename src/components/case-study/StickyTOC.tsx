@@ -40,13 +40,11 @@ export function StickyTOC({ items }: StickyTOCProps) {
 
   return (
     <nav
-      className="sticky top-28 hidden lg:block"
+      className="sticky top-[32vh] hidden self-start lg:block"
       aria-label="Table of contents"
     >
-      <p className="mb-4 text-xs font-medium tracking-[0.15em] text-[var(--color-graphite-faint)] uppercase dark:text-[var(--color-graphite-faint-dark)]">
-        Contents
-      </p>
-      <ul className="space-y-2">
+      <p className="mb-4 text-xs tracking-[0.12em] text-black/40 uppercase">Contents</p>
+      <ul className="space-y-1">
         {items.map(({ id, title }) => {
           const isActive = activeId === id
           return (
@@ -54,16 +52,14 @@ export function StickyTOC({ items }: StickyTOCProps) {
               <button
                 type="button"
                 onClick={() => handleClick(id)}
-                className={`relative block w-full py-1 text-left text-sm transition-colors duration-300 ${
-                  isActive
-                    ? 'text-[var(--color-graphite)] dark:text-[var(--color-graphite-dark)]'
-                    : 'text-[var(--color-graphite-faint)] hover:text-[var(--color-graphite-light)] dark:text-[var(--color-graphite-faint-dark)] dark:hover:text-[var(--color-graphite-light-dark)]'
+                className={`relative block w-full py-1.5 text-left text-sm transition-colors duration-200 ${
+                  isActive ? 'text-black' : 'text-black/40 hover:text-black/70'
                 }`}
               >
                 {isActive && (
                   <motion.span
                     layoutId="toc-indicator"
-                    className="absolute top-1/2 -left-4 h-px w-2 -translate-y-1/2 bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)]"
+                    className="absolute top-1/2 -left-4 h-px w-2.5 -translate-y-1/2 bg-black"
                     transition={{ type: 'spring', stiffness: 400, damping: 35 }}
                   />
                 )}

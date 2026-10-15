@@ -67,7 +67,6 @@ export function StudioLightbox({ piece, onClose }: StudioLightboxProps) {
                 <p className="text-xl font-light tracking-tight text-[var(--color-graphite)]">
                   {piece.title}
                 </p>
-                <p className="mt-1 text-sm text-[var(--color-graphite-faint)]">{piece.caption}</p>
               </figcaption>
             </div>
 

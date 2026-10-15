@@ -8,7 +8,18 @@ interface CaseStudyHeroProps {
   study: CaseStudy
 }
 
+function projectYear(timeline: string): string {
+  const match = timeline.match(/\d{4}(?:\s*[–-]\s*\d{4})?/)
+  return match?.[0] ?? timeline
+}
+
 export function CaseStudyHero({ study }: CaseStudyHeroProps) {
+  const year = projectYear(study.timeline)
+  const heroImages =
+    study.heroImages && study.heroImages.length > 0
+      ? study.heroImages
+      : [{ src: study.heroImage, alt: `${study.title} hero image`, fit: study.imageFit }]
+
   return (
     <header>
       <motion.div
@@ -18,100 +29,80 @@ export function CaseStudyHero({ study }: CaseStudyHeroProps) {
       >
         <Link
           to="/projects"
-          className="inline-flex items-center gap-2 text-sm tracking-wide text-[var(--color-graphite-faint)] transition-colors hover:text-[var(--color-graphite)] dark:text-[var(--color-graphite-faint-dark)] dark:hover:text-[var(--color-graphite-dark)]"
+          className="inline-flex items-center gap-2 text-sm tracking-wide text-black/45 transition-colors hover:text-black"
         >
-          <span aria-hidden="true">←</span> All projects
+          <span aria-hidden="true">←</span> Work
         </Link>
       </motion.div>
 
       <motion.div
-        className="mt-12"
+        className="mt-14 max-w-3xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ ...fadeTransition, delay: 0.1 }}
+        transition={{ ...fadeTransition, delay: 0.08 }}
       >
-        <div className="flex flex-wrap gap-2">
-          {study.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full border border-[var(--color-beige)] px-3 py-1 text-xs tracking-wide text-[var(--color-graphite-faint)] dark:border-[var(--color-beige-dark)] dark:text-[var(--color-graphite-faint-dark)]"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        <p className="text-sm tracking-wide text-black/45">{year}</p>
 
-        <h1 className="mt-6 max-w-3xl text-[clamp(2rem,5vw,3.5rem)] font-light leading-[1.1] tracking-tight text-[var(--color-graphite)] dark:text-[var(--color-graphite-dark)]">
+        <h1
+          className="mt-5 text-[clamp(2.25rem,5.5vw,4rem)] font-normal leading-[1.05] tracking-tight"
+          style={{ fontFamily: 'var(--font-hero-name)' }}
+        >
           {study.title}
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-[var(--color-graphite-light)] dark:text-[var(--color-graphite-light-dark)]">
+
+        <p className="mt-5 max-w-2xl text-[1.125rem] leading-relaxed text-black/70">
           {study.subtitle}
         </p>
-
-        <dl className="mt-8 flex flex-wrap gap-x-12 gap-y-4 text-sm">
-          <div>
-            <dt className="text-[var(--color-graphite-faint)] dark:text-[var(--color-graphite-faint-dark)]">Role</dt>
-            <dd className="mt-1 font-medium text-[var(--color-graphite)] dark:text-[var(--color-graphite-dark)]">
-              {study.role}
-            </dd>
-          </div>
-          <div>
-            <dt className="text-[var(--color-graphite-faint)] dark:text-[var(--color-graphite-faint-dark)]">Timeline</dt>
-            <dd className="mt-1 font-medium text-[var(--color-graphite)] dark:text-[var(--color-graphite-dark)]">
-              {study.timeline}
-            </dd>
-          </div>
-          {study.team && (
-            <div>
-              <dt className="text-[var(--color-graphite-faint)] dark:text-[var(--color-graphite-faint-dark)]">Team</dt>
-              <dd className="mt-1 font-medium text-[var(--color-graphite)] dark:text-[var(--color-graphite-dark)]">
-                {study.team}
-              </dd>
-            </div>
-          )}
-        </dl>
 
         {study.externalUrl && (
           <a
             href={study.externalUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex text-sm tracking-wide text-[var(--color-graphite-faint)] transition-colors hover:text-[var(--color-graphite)]"
+            className="mt-8 inline-flex text-sm tracking-wide text-black/50 underline decoration-black/20 underline-offset-4 transition-colors hover:text-black hover:decoration-black/50"
           >
-            Open live prototype →
+            Open live prototype
           </a>
         )}
       </motion.div>
 
-      <motion.div
-        className={`mt-12 w-full overflow-hidden ${
-          study.imageFit === 'cover'
-            ? 'aspect-[21/9] rounded-sm bg-black shadow-[0_4px_32px_rgba(0,0,0,0.08)]'
-            : 'flex min-h-[20rem] items-center justify-center bg-transparent md:min-h-[28rem]'
-        }`}
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ ...fadeTransition, delay: 0.2 }}
-      >
-        {isCssBackground(study.heroImage) ? (
-          <div
-            className="h-full w-full"
-            style={{ background: study.heroImage }}
-            role="img"
-            aria-label={`${study.title} hero image`}
-          />
-        ) : (
-          <img
-            src={study.heroImage}
-            alt={`${study.title} hero image`}
-            className={
-              study.imageFit === 'cover'
-                ? 'h-full w-full object-cover'
-                : 'max-h-[min(70vh,36rem)] w-auto max-w-full object-contain'
-            }
-          />
-        )}
-      </motion.div>
+      <div className="mt-14 space-y-6">
+        {heroImages.map((image, i) => {
+          const contain = image.fit === 'contain'
+          return (
+            <motion.div
+              key={image.alt}
+              className={`mx-auto w-full overflow-hidden ${
+                contain
+                  ? 'flex min-h-[16rem] items-center justify-center bg-transparent md:min-h-[22rem]'
+                  : 'flex justify-center bg-transparent'
+              }`}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...fadeTransition, delay: 0.12 + i * 0.06 }}
+            >
+              {isCssBackground(image.src) ? (
+                <div
+                  className="aspect-[21/9] w-full"
+                  style={{ background: image.src }}
+                  role="img"
+                  aria-label={image.alt}
+                />
+              ) : (
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className={
+                    contain
+                      ? 'mx-auto max-h-[min(70vh,36rem)] w-auto max-w-full object-contain'
+                      : 'mx-auto h-auto w-full max-w-4xl object-contain'
+                  }
+                />
+              )}
+            </motion.div>
+          )
+        })}
+      </div>
     </header>
   )
 }

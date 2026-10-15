@@ -92,7 +92,6 @@ export const STUDIO_PIECES: StudioPiece[] = [
   {
     id: 'bat-animation',
     title: 'Pixelar',
-    caption: 'Sprite work for a game design experiment',
     category: '2d',
     mediaType: 'video',
     src: '15RpkvNoiJVODTbsSaz1qtwtKhZQXG2L8',
