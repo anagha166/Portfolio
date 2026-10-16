@@ -50,10 +50,14 @@ export function BrandingPage() {
                   )}
                 </div>
                 <h2 className="mt-4 text-lg font-medium tracking-tight">{org.shortName}</h2>
-                <p className="mt-1 text-sm leading-relaxed text-black/55">{org.name}</p>
-                <p className="mt-2 text-xs font-medium tracking-[0.14em] text-black/40 uppercase">
-                  Coming soon
-                </p>
+                <p className="mt-1 text-sm leading-relaxed opacity-60">{org.name}</p>
+                {org.published ? (
+                  <p className="mt-2 text-sm leading-relaxed opacity-60">{org.highlight}</p>
+                ) : (
+                  <p className="mt-2 text-xs font-medium tracking-[0.14em] uppercase opacity-45">
+                    Coming soon
+                  </p>
+                )}
               </Link>
             </motion.div>
           ))}

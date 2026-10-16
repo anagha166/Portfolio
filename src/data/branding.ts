@@ -1,4 +1,4 @@
-import ds3Logo from '@/assets/my_photos/marketing/DS3.png'
+import ds3Logo from '@/assets/my_photos/marketing/DS3/DS3.png'
 import rrLogo from '@/assets/my_photos/marketing/RR.png'
 
 export interface BrandingMedia {
@@ -27,6 +27,10 @@ export interface BrandingOrg {
   sections: BrandingSection[]
   /** Optional logo / cover once you drop assets in */
   logoSrc?: string
+  /** Case study is live, so the index should not say coming soon */
+  published?: boolean
+  /** One line for the branding index, once a case study exists */
+  highlight?: string
 }
 
 export const brandingOrgs: BrandingOrg[] = [
@@ -36,9 +40,11 @@ export const brandingOrgs: BrandingOrg[] = [
     shortName: 'DS3',
     logoSrc: ds3Logo,
     summary:
-      'Branding and marketing for DS3 with a more professional, minimal look that still feels like the org.',
+      'Marketing direction for DS3: a technical brand, campaigns that sound like people, and a feed with more aura.',
+    published: true,
+    highlight: '137.2k views in a month. Followers up 30%.',
     approach:
-      'Designs pull from data science as a field, Datasaur (the dinosaur mascot), and the specific event or campaign they sit on, so each piece feels on-brand without getting noisy.',
+      'The work uses Datasaur and the chevron mark, then builds campaigns on computer surfaces so the org feels technical and human at the same time.',
     sections: [
       {
         id: 'reels',

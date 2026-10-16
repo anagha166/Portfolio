@@ -40,11 +40,18 @@ export const caseStudies: CaseStudy[] = [
         id: "problem",
         title: "Motivation",
         content: [
-          "I am abroad right now, studying in Bologna. Between classes, cheap weekend trains, and a growing list of places everyone says you “have to” see, the term feels short in a way Google Calendar never quite captures.",
+          "I recently made the very exciting, slightly terrifying decision to leave my hometown and move to  Bologna, Italy for the next 5 months. It's been such an exciting experience, one I'm very lucky to have. Such an exciting experience, in fact, that I've been consumed with the incoming feeling of nostalgia, as it seems time is moving faster than ever here. Between classes, cheap weekend trains, and a growing list of places everyone says you “have to” see, the term feels short in a way Google Calendar never quite captures.",
           "The spark came from living with roommates who said the same things I was thinking: “so much to do, so little time,” and “I need to get everything organized.” We had bucket lists in chats, tickets in inboxes, and class schedules in another app. Nothing put them next to each other.",
           "Tools students already use (Google Calendar, Instagram, group chats, booking sites) split the job. A class calendar shows occupancy, not opportunity. A trip planner shows destinations, not whether the week is actually free. The result is overbooking on class days, or open Fridays that never become a plan.",
         ],
-        images: [
+      },
+      {
+        id: "the-process",
+        title: "Process",
+        content: [
+          "This project started with a narrower question: What if there existed an app that could help me figure out the cheapest way to get from one place to another? Before conducting interviews (Bad idea), I decided to jump right into what I thought was the problem - finding cheap transport. Thus was born OMW (On my way).The idea was simple: An interface that could tell you 'Hey, instead of taking a flight from Bologna to Paris, take a bus from Bologna to Milan, then a flight from Milan to Paris'",
+        "One thing I didn't consider: This was much more convoluted and complicated than it seemed. I sketched the inital wireframes, and began to wonder what group of users I was really designing for. Is this really the pain point i'm trying to target?"
+        ],images: [
           {
             src: ondigoOmwInitial,
             alt: "Early OMW wireframe sketch exploring airport-style travel search with alternative routes",
@@ -56,17 +63,8 @@ export const caseStudies: CaseStudy[] = [
         id: "research",
         title: "Research",
         content: [
-          "Rather than formal interviews, this started as ongoing conversations with my roommates and other students on exchange: what they wanted to see, what was already booked, and what kept slipping because nobody could see a free weekend clearly.",
-          "The pattern was consistent. People were not short on ideas. They were short on a view that answered: given classes, locked trips, and a finite term, when should I actually go, and to where?",
-        ],
-      },
-      {
-        id: "insights",
-        title: "Insights",
-        content: [
-          "Busy is not the same as booked, and booked is not the same as a good week to go.",
-          "Students need three layers on one calendar: trips already locked, quieter windows that still fit open dates and tastes, and class rhythm as texture rather than a block that swallows the whole day.",
-          "Suggestion should arrive as place + dates (a quieter week that already fits), not as a feed of destinations that still leave you hunting for a free weekend.",
+          "Rather than formal interviews, I started with conversations with my roommates and other students on exchange. I began to see a pattern. It was less about knowing how to go from one place to another, and more keeping track of what they wanted to do, what they wanted to see, what was already booked, and what kept slipping because nobody could see a free weekend clearly.",
+          "The pattern was consistent. People were not short on knowing how to get there. They were short on a view that answered: given classes, locked trips, and a finite term, when should I actually go, and to where?",
         ],
         pullQuote:
           "So much to do, so little time. I need to get everything organized.",

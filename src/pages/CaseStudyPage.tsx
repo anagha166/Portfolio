@@ -4,7 +4,6 @@ import { getCaseStudy } from '@/data/projects'
 import { CaseStudyHero } from '@/components/case-study/CaseStudyHero'
 import { CaseStudySection } from '@/components/case-study/CaseStudySection'
 import { StickyTOC } from '@/components/case-study/StickyTOC'
-import { pageVariants } from '@/animations/transitions'
 
 export function CaseStudyPage() {
   const { slug } = useParams<{ slug: string }>()

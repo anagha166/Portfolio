@@ -1,6 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { pageVariants } from '@/animations/transitions'
+import { Ds3CaseStudy } from '@/components/branding/Ds3CaseStudy'
 import { getBrandingOrg } from '@/data/branding'
 
 export function BrandingOrgPage() {
@@ -8,6 +9,7 @@ export function BrandingOrgPage() {
   const org = slug ? getBrandingOrg(slug) : undefined
 
   if (!org) return <Navigate to="/branding" replace />
+  if (org.slug === 'data-science-student-society') return <Ds3CaseStudy />
 
   return (
     <motion.article
