@@ -1,5 +1,5 @@
 import ds3Logo from '@/assets/my_photos/marketing/DS3/DS3.png'
-import rrLogo from '@/assets/my_photos/marketing/RR.png'
+import rrLogo from '@/assets/my_photos/marketing/RR/RR.png'
 
 export interface BrandingMedia {
   src?: string

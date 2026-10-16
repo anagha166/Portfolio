@@ -186,8 +186,7 @@ export function Ds3CaseStudy() {
               Student Society
             </h1>
             <p className="mt-6 max-w-[36rem] text-[1.125rem] leading-relaxed">
-              A year of making DS3 more educational, more relatable, and harder to scroll past.
-              Technical brand. A voice that sounds like a person. Enough aura to stop.
+              A year of making DS3 more educational, more relatable, and harder to scroll past. Chat is this aura?
             </p>
           </motion.div>
 
@@ -231,23 +230,10 @@ export function Ds3CaseStudy() {
                 </p>
                 <p>
                   I stepped in as Marketing Director in June 2025 with a brief I wrote for myself.
-                  Make the content more educational. Make it more relatable. And give it more aura,
-                  so a data science org could feel like somewhere you actually wanted to be.
-                </p>
-                <p>
-                  That became a system, not a pile of posts. Same character, same mark, a voice that
-                  sounds like texting a friend, and graphics that live on computer surfaces instead
-                  of generic flyers.
+                  Make the content more educational. Make it more relatable,
+                  so a technical college org could feel like somewhere you actually wanted to be.
                 </p>
               </Prose>
-              <blockquote className="mt-10 max-w-[28rem]">
-                <p
-                  className="text-[clamp(1.35rem,2.4vw,1.75rem)] leading-snug tracking-tight"
-                  style={{ fontFamily: 'var(--font-hero-name)' }}
-                >
-                  Teach something. Sound like a person. Look like you meant it.
-                </p>
-              </blockquote>
             </Section>
 
             <Section id="stickers" index="02" title="Datasaur, stuck on the site">
@@ -277,12 +263,11 @@ export function Ds3CaseStudy() {
                 <p>
                   The feed runs on one technical theme. Messages, browser windows, folders, a cursor.
                   A post can be about summer, a social, or a deadline, and it still looks like DS3,
-                  because it looks like a computer.
+                  because it looks like a computer. Made on Canva, Adobe is expensive.
                 </p>
                 <p>
-                  The summer series is one thread. It opens in Messages, moves through travel,
-                  internships, art, food, and people, and closes on the fall GBM. Hiring and
-                  Gliderport Sunset use the same surfaces. Different jobs, same system.
+                  The summer series is one such example. It opens in Messages, moves through travel,
+                  internships, art, food, and people, and closes on the fall GBM. 
                 </p>
               </Prose>
               <div className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-3">
@@ -324,11 +309,6 @@ export function Ds3CaseStudy() {
                   The educational brief needed a format people would actually tap. I built a quiz
                   system for Instagram stories: short technical questions, code tracing and
                   LeetCode-style checks, posted in stories and saved as a highlight.
-                </p>
-                <p>
-                  New questions go up weekly. If someone wants a topic, they can DM it. The stories
-                  look like a product, circuit boards and a prompt cursor, not a template with a
-                  poll slapped on.
                 </p>
                 <p>
                   Story engagement went up 50%. The feed finally had a reason to stop that wasn’t an
