@@ -4,12 +4,13 @@
 import { SketchbookSpread } from '@/components/sketchbook/SketchbookSpread'
 import { HeroSpread } from '@/components/home/HeroSpread'
 import { FeaturedWorkSpread } from '@/components/home/FeaturedWorkSpread'
+import { BrandingSpread } from '@/components/home/BrandingSpread'
 import { StudioSpread } from '@/components/home/StudioSpread'
 import { ApproachSpread } from '@/components/home/ApproachSpread'
 import { ConnectSpread } from '@/components/home/ConnectSpread'
 // import { useDrawingEngine } from '@/hooks/useDrawingEngine'
 
-const TOTAL_PAGES = 5
+const TOTAL_PAGES = 6
 
 export function HomePage() {
   // const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -61,14 +62,18 @@ export function HomePage() {
       </SketchbookSpread>
 
       <SketchbookSpread index={2} total={TOTAL_PAGES}>
-        <StudioSpread />
+        <BrandingSpread />
       </SketchbookSpread>
 
       <SketchbookSpread index={3} total={TOTAL_PAGES}>
-        <ApproachSpread />
+        <StudioSpread />
       </SketchbookSpread>
 
       <SketchbookSpread index={4} total={TOTAL_PAGES}>
+        <ApproachSpread />
+      </SketchbookSpread>
+
+      <SketchbookSpread index={5} total={TOTAL_PAGES}>
         <ConnectSpread />
       </SketchbookSpread>
     </div>

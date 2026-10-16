@@ -61,7 +61,7 @@ export function CaseStudyHero({ study }: CaseStudyHeroProps) {
             rel="noopener noreferrer"
             className="mt-8 inline-flex text-sm tracking-wide text-black/50 underline decoration-black/20 underline-offset-4 transition-colors hover:text-black hover:decoration-black/50"
           >
-            Open live prototype
+            Open live website
           </a>
         )}
       </motion.div>

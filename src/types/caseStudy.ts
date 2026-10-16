@@ -9,8 +9,10 @@ export interface CaseStudyImage {
   caption?: string
   /** cover crops to fill; contain shows the full image (use for tall phone mockups) */
   fit?: 'cover' | 'contain'
-  /** Optional display size for screenshots / small reference images */
-  size?: 'sm' | 'md'
+  /** Optional display size. lg is slightly under full width. */
+  size?: 'sm' | 'md' | 'lg'
+  /** In a row, stretch this image across both columns */
+  span?: 'full'
 }
 
 export interface CaseStudySection {
@@ -20,8 +22,8 @@ export interface CaseStudySection {
   /** Extra paragraphs after images / metrics (for inline figure breaks) */
   contentAfter?: string[]
   images?: CaseStudyImage[]
-  /** stack (default) or row for side-by-side process / comparison shots */
-  imageLayout?: 'stack' | 'row'
+  /** stack (default), row for side-by-side shots, or tight for larger pages with a small gap */
+  imageLayout?: 'stack' | 'row' | 'tight'
   /** Terms in the section copy that show an image on hover */
   hoverPreviews?: { term: string; src: string; alt: string }[]
   /** Empty slot under the section for a photo you still need to drop in */

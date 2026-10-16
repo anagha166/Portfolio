@@ -1,6 +1,14 @@
 import type { CaseStudy } from "@/types/caseStudy";
 import ascendImg from "@/assets/projects/Ascendtials.png";
 import ds3Img from "@/assets/projects/DS3.png";
+import ds3OldSite from "@/assets/projects_photos/process/UCSDDS3/oldwebsite.png";
+import ds3VisionBoard from "@/assets/projects_photos/process/UCSDDS3/vboard.png";
+import ds3Directions from "@/assets/projects_photos/process/UCSDDS3/everyone'sdesigns.png";
+import ds3Workshops from "@/assets/projects_photos/process/UCSDDS3/workshopspage.png";
+import ds3Professional from "@/assets/projects_photos/process/UCSDDS3/professionapage.png";
+import ds3Social from "@/assets/projects_photos/process/UCSDDS3/socialpage.png";
+import ds3Datahacks from "@/assets/projects_photos/process/UCSDDS3/datahackspage.png";
+import ds3Projects from "@/assets/projects_photos/process/UCSDDS3/projectspage.png";
 import bitefreshImg from "@/assets/projects/BiteFresh.png";
 import bitefreshStockImg from "@/assets/projects_photos/BiteFresh2.png";
 import matterHeroImg from "@/assets/projects_photos/process/matter/mattermock1.png";
@@ -17,7 +25,23 @@ import ondigoBts from "@/assets/projects_photos/process/ondigo/ondigoBTS.jpeg";
 import ondigoCalView from "@/assets/projects_photos/process/ondigo/calview.png";
 import consultingImg from "@/assets/projects/Consulting.png";
 import studybuddyImg from "@/assets/projects/StudyBuddy.png";
-import yipyapImg from "@/assets/projects/Yipyap.png";
+import studybuddyOld from "@/assets/projects_photos/process/studybuddy/oldversion.png";
+import studybuddyVision from "@/assets/projects_photos/process/studybuddy/visionboard.png";
+import studybuddyLanding from "@/assets/projects_photos/process/studybuddy/landing.png";
+import studybuddyProgress from "@/assets/projects_photos/process/studybuddy/progress.png";
+import studybuddyRanking from "@/assets/projects_photos/process/studybuddy/ranking.png";
+import studybuddyChats from "@/assets/projects_photos/process/studybuddy/chats.png";
+import studybuddyClasses from "@/assets/projects_photos/process/studybuddy/classes.png";
+import studybuddyLogo from "@/assets/projects_photos/process/studybuddy/brandinglogo.png";
+import studybuddyColors from "@/assets/projects_photos/process/studybuddy/colors.png";
+import studybuddyStore from "@/assets/projects_photos/process/studybuddy/store.png";
+import studybuddyTeacher from "@/assets/projects_photos/process/studybuddy/teacherview.png";
+import yipyapImg from "@/assets/projects_photos/process/yipyap/yipyapcomp.png";
+import yipyapFriends from "@/assets/projects_photos/process/yipyap/yipyap2.png";
+import yipyapOverview from "@/assets/projects_photos/process/yipyap/designoverview.png";
+import yipyapPalette from "@/assets/projects_photos/process/yipyap/colors.png";
+import yipyapFinal from "@/assets/projects_photos/process/yipyap/yipyapfinal.png";
+import yipyapFinal2 from "@/assets/projects_photos/process/yipyap/final2.png";
 import mirrorImg from "@/assets/projects/Mirror.png";
 
 export const caseStudies: CaseStudy[] = [
@@ -50,8 +74,9 @@ export const caseStudies: CaseStudy[] = [
         title: "Process",
         content: [
           "This project started with a narrower question: What if there existed an app that could help me figure out the cheapest way to get from one place to another? Before conducting interviews (Bad idea), I decided to jump right into what I thought was the problem - finding cheap transport. Thus was born OMW (On my way).The idea was simple: An interface that could tell you 'Hey, instead of taking a flight from Bologna to Paris, take a bus from Bologna to Milan, then a flight from Milan to Paris'",
-        "One thing I didn't consider: This was much more convoluted and complicated than it seemed. I sketched the inital wireframes, and began to wonder what group of users I was really designing for. Is this really the pain point i'm trying to target?"
-        ],images: [
+          "One thing I didn't consider: This was much more convoluted and complicated than it seemed. I sketched the inital wireframes, and began to wonder what group of users I was really designing for. Is this really the pain point i'm trying to target?",
+        ],
+        images: [
           {
             src: ondigoOmwInitial,
             alt: "Early OMW wireframe sketch exploring airport-style travel search with alternative routes",
@@ -212,7 +237,8 @@ export const caseStudies: CaseStudy[] = [
         title: "Opportunity",
         content: [
           "Rather than building another habit tracker, I asked a different question: what if an app remembered these small habits for you?",
-          "Around the same time, I was learning Italian on Duolingo and getting inspired by its slightly threatening, playful reminder style. What if self-care felt less like a boring app simply telling you what to do, and more like a caring, strict older sibling? That's where matter came from. I spent the next few days designing a couple pages and a pitch for the app, both to present to my class and to figure out how I wanted to structure the app."        ],
+          "Around the same time, I was learning Italian on Duolingo and getting inspired by its slightly threatening, playful reminder style. What if self-care felt less like a boring app simply telling you what to do, and more like a caring, strict older sibling? That's where matter came from. I spent the next few days designing a couple pages and a pitch for the app, both to present to my class and to figure out how I wanted to structure the app.",
+        ],
         hoverPreviews: [
           {
             term: "Duolingo",
@@ -269,6 +295,174 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
+    slug: "studybuddy",
+    title: "Study Buddy",
+    subtitle:
+      "An AI learning flow that coaches reasoning instead of handing over answers",
+    role: "Product Designer & Developer",
+    timeline: "Academic / personal build · 2025",
+    team: "Small collaborative build",
+    impact:
+      "Designed a Socratic AI experience that keeps students in the thinking loop",
+    tags: ["EdTech", "Human-AI Interaction", "Product Design"],
+    heroImage: studybuddyImg,
+    imageFit: "contain",
+    sections: [
+      {
+        id: "problem",
+        title: "Problem",
+        content: [
+          "For this project, I was approached as a designer on Linkedin for the first time. The idea was created from a hackathon project, that had the chance to evolve into something more. However, the flow of the existing website was unclear, and the app had no particular direction. So, I was tasked with redesigning the website, and creating a new app flow for the product.",
+          "I was itruiged when I first heard the idea: most AI study tools optimize for speed to an answer, but this one incentivizes the user to be the one providing the answer.",
+          "The idea for Study Buddy was this: what if an AI study tool could help you think through a problem, rather than just provide the answer?"
+        ],
+        images: [
+          {
+            src: studybuddyOld,
+            alt: "Earlier Study Buddy site: a prompt chat beside a Brain Points panel and a duck companion.",
+            fit: "contain",
+          },
+        ],
+      },
+      {
+        id: "research",
+        title: "Research",
+        content: [
+          "The first step was to understand the problem we were trying to solve. I started by talking to the founder of the product, and understanding his vision for the tool. I then researched similar products, to get a better sense of the market and competition.",
+         "I looked at how strong teachers use questions to guide discovery, then translated that into an interaction model for an AI tutor.",
+          "The product needed to feel conversational and supportive while refusing to collapse into answer dumping.",
+          "Naturally, my first step was a vision board. I spent a few days looking into chatbots, seeing what makes educational apps engaging, and researching what incentives we could offer to users. The results was a concept called 'Brain Points', which would be awarded to users for answering questions correctly, and used to unlock new features and content.",
+        ],
+        images: [
+          {
+            src: studybuddyVision,
+            alt: "Study Buddy vision board of educational apps, chatbots, class views, and Brain Points ideas.",
+            fit: "contain",
+          },
+        ],
+      },
+      {
+        id: "insights",
+        title: "Insights",
+        content: [
+          "Guided prompts work when each step asks the student to contribute reasoning, not just confirm an AI guess.",
+          "The UI has to make the dialogue feel calm and focused, complexity belongs in the model behavior",
+          "Our main goal is to incentive competitiveness and critical thinking, meaning that features such as Brain Points should be visible right from the go, along with a user's ranking compared to the rest of their class.",
+        ],
+        images: [
+          {
+            src: studybuddyLanding,
+            alt: "Study Buddy home: character, Brain Points, streak, and the class list.",
+            fit: "contain",
+          },
+        ],
+      },
+      {
+        id: "opportunity",
+        title: "Opportunity",
+        content: [
+          "Craft a guided learning experience where AI prompts support critical thinking step by step.",
+          "The product needs to feel organized, with a clear hierarchy of features. Each user has multiple classes, each one with a conversation. Additionally, the user must be able to track their progess, and check for deadlines and upcoming conversation assignments.",
+        ],
+        imageLayout: "row",
+        images: [
+          {
+            src: studybuddyProgress,
+            alt: "My Progress, with level completion, upcoming conversations, and practice left.",
+            fit: "contain",
+          },
+          {
+            src: studybuddyRanking,
+            alt: "Leaderboard of top ranked players and their Brain Points.",
+            fit: "contain",
+          },
+          {
+            src: studybuddyStore,
+            alt: "Brain Points shop where students spend points on character costumes.",
+            fit: "contain",
+            size: "lg",
+            span: "full",
+          },
+        ],
+      },
+      {
+        id: "design-process",
+        title: "Design Process",
+        content: [
+          "I designed wireframes and interactive prototypes in Figma, then helped build a responsive frontend with Next.js and Tailwind.",
+          "Then came branding. What makes a product stand apart? A unique name, color scheme, and of course a recognizable icon character. For this, I decided upon a customizable icon of a small figure with one defining feature: a large brain. Fitting, right? The features of the character, such as skin color and accessories would be chosen by the user upon setting up the app. Accessories like clothing would be prizes, similar to Subway Surfers, items that users could buy with Brain Points.",
+          "The color scheme had a similar theme, using bright and playful colors, to mimic a retro video game. Similarily, the pixelated font was chosen for this same reason, to emphasize the game aspect of this educational tool.",
+        ],
+        images: [
+          {
+            src: studybuddyLogo,
+            alt: "Pixel character with a large brain, the customizable Study Buddy icon, next to level and ranking.",
+            size: "md",
+          },
+          {
+            src: studybuddyColors,
+            alt: "Study Buddy palette: teal, sage, off-white, charcoal, and rose.",
+            fit: "contain",
+            size: "lg",
+          },
+        ],
+      },
+      {
+        id: "the-other-side",
+        title: "The Other Side",
+        content: [
+          "The next thing to consider, the other side of the coin. What does the teacher see? How can we make the experience feel engaging and rewarding for them?",
+          "The teacher needs to be able to see the progress of their students, and the progress of the class as a whole. They need to be able to see which students are struggling, and which students are excelling. They need to be able to see which questions are being asked most, and which questions are being asked least.",
+          "The teacher needs to be able to see which students are struggling, and which students are excelling. They need to be able to see which questions are being asked most, and which questions are being asked least.",
+        ],
+        images: [
+          {
+            src: studybuddyTeacher,
+            alt: "Teacher UI for classes, progress tracking, rankings, prompts, and creating a class.",
+            fit: "contain",
+            size: "lg",
+          },
+        ],
+      },
+      {
+        id: "final-solution",
+        title: "Final Solution",
+        content: [
+          "Study Buddy is an AI-powered learning system that walks students through concepts with guiding questions tailored to their input.",
+          "The experience prioritizes active learning: the product’s job is to scaffold thinking, not replace it.",
+        ],
+        imageLayout: "row",
+        images: [
+          {
+            src: studybuddyChats,
+            alt: "Study Buddy chat where guiding questions award Brain Points for student answers.",
+            fit: "contain",
+          },
+          {
+            src: studybuddyClasses,
+            alt: "My Classes list, with each course showing the latest question from its chat.",
+            fit: "contain",
+          },
+        ],
+      },
+      {
+        id: "impact",
+        title: "Impact",
+        content: [
+          "The project became a concrete exploration of human-AI interaction in education — showing how prompt design and UX together can protect agency while still offering support.",
+        ],
+      },
+    ],
+    reflection: [
+      "In learning products, the most ethical AI feature is often the one that withholds the answer a little longer.",
+    ],
+    lessonsLearned: [
+      "Interaction design and prompt design are the same craft in AI tutors.",
+      "Students need scaffolding, not shortcuts dressed up as help.",
+      "Restraint can be the product differentiator.",
+    ],
+  },
+  {
     slug: "bitefresh",
     title: "BiteFresh",
     subtitle: "A smart kitchen companion that helps households waste less food",
@@ -286,31 +480,31 @@ export const caseStudies: CaseStudy[] = [
         id: "problem",
         title: "Problem",
         content: [
-          "Households discard about half the fresh produce and meat in their fridges — not because people do not care, but because inventory is invisible until it is too late.",
-          "Sharing a fridge with roommates made the pattern obvious: food gets bought, buried, forgotten, and thrown out. Grocery lists live in one place, leftovers in another, and expiration dates almost nowhere.",
+          "Households discard about half the fresh produce and meat in their fridges. This isnt a lack of care (I mean sometimes it could be, but generally speaking), but because inventory is invisible until it is too late.",
+          "Sharing a fridge with roommates made the pattern obvious for me: food gets bought, buried, forgotten, and thrown out. Grocery lists live in one place, leftovers in another, and expiration dates hidden on the packages themselves.",
         ],
         pullQuote:
-          "Households discard about half the fresh produce and meat in their fridges.",
+          "Households discard about 50% of the fresh produce and meat in their fridges.",
       },
       {
         id: "research",
         title: "Research",
         content: [
-          "I started from lived observation — roommate fridge chaos — then ran informal user interviews with my mom and roommates about how food actually disappears in a shared kitchen.",
-          "A pattern showed up immediately: in a shared fridge, things migrate to the back. Once something is buried behind someone else’s leftovers, it stops existing until it smells. People were not asking for recipes — they wanted a way to constantly check not just what they have, but when it expires.",
+          "I started from lived observation, my first experience sharing a fridge with roommates my sophomore year of college. It then progressed into informal user interviews with my mom and roommates about how food actually disappears in a shared kitchen.",
+          "A pattern showed up immediately: in a shared fridge, things migrate to the back. Once something is buried behind someone else’s leftovers, it stops existing until it goes bad, usually bad enough to smell.",
           "I mapped the moments where waste actually happens: after shopping, midweek when leftovers pile up, and right before the next grocery run. Existing apps either treated inventory like a spreadsheet or leaned too hard on recipes. Neither matched how my interviewees decided what to cook or buy tonight.",
         ],
         pullQuote:
-          "Stuff moves to the back of the fridge — I need to see what I have and when it expires, not just a list of ingredients.",
+          "Stuff moves to the back of the fridge, and gets lost. So, I need to be able to see what I have and when it expires, not just a list of ingredients.",
       },
       {
         id: "insights",
         title: "Insights",
         content: [
-          "Shared fridges create out-of-sight, out-of-mind waste. Items that drift to the back are forgotten long before they spoil — so visibility has to cover location and time, not just item names.",
+          "Shared fridges create out-of-sight, out-of-mind waste. Items that drift to the back are forgotten long before they spoil, so visibility has to cover location and time, not just item names.",
           "Interviewees wanted ongoing awareness: a place they could check constantly for what is in the kitchen and how much life each item has left.",
           "People do not need another meal planner. They need a lightweight system of record for what is already home.",
-          "Expiration awareness only helps if it is estimated for them — most items never get a date typed in by hand.",
+          "Expiration awareness only helps if it is estimated for them. So, most items never get a date typed in by hand.",
           "Grocery lists and inventory have to feel like one continuous flow, not two disconnected features.",
         ],
       },
@@ -325,7 +519,7 @@ export const caseStudies: CaseStudy[] = [
         id: "design-process",
         title: "Design Process",
         content: [
-          "Interview takeaways shaped the core jobs: add what you bought, see what is at risk of expiring, and build a grocery list from gaps in inventory — especially for shared-fridge households where food disappears from view.",
+          "Interview takeaways shaped the core jobs: add what you bought, see what is at risk of expiring, and build a grocery list from gaps in inventory, especially for shared-fridge households where food disappears from view.",
           "I designed wireframes and high-fidelity flows in Figma, then built the product natively in Swift with Xcode, with Google Gemini estimating expiration windows so users are not stuck entering dates for every item.",
         ],
         images: [
@@ -333,7 +527,7 @@ export const caseStudies: CaseStudy[] = [
             src: bitefreshStockImg,
             alt: "BiteFresh My Stock screen showing fridge and pantry items with expiration dates",
             caption:
-              "My Stock — inventory with visible expiration windows for fridge and pantry",
+              "My Stock: inventory with visible expiration windows for fridge and pantry",
             fit: "contain",
           },
         ],
@@ -343,111 +537,27 @@ export const caseStudies: CaseStudy[] = [
         title: "Final Solution",
         content: [
           "BiteFresh is an iOS kitchen assistant for tracking fridge and pantry inventory, managing grocery lists, and monitoring expiration risk with AI-assisted shelf-life estimates.",
-          "The My Stock screen makes expiration legible at a glance — so roommates and family can check what they have and when it goes bad before food gets buried and forgotten.",
-          "Barcode scanning and grocery-list management reduce the friction of keeping the system up to date — the main reason food-waste apps get abandoned.",
-        ],
-        metrics: [
-          { value: "~50%", label: "Fresh food often discarded at home" },
-          { value: "AI", label: "Expiration estimates via Gemini" },
-          { value: "iOS", label: "Native Swift build" },
+          "The My Stock screen makes expiration legible at a glance, so roommates and family can check what they have and when it goes bad before food gets buried and forgotten.",
+          "Barcode scanning and grocery-list management reduce the friction of keeping the system up to date, AKA the main reason food-waste apps get abandoned.",
         ],
       },
       {
         id: "impact",
         title: "Impact",
         content: [
-          "The app turns a fuzzy household problem into a concrete daily loop: see what you have, use what is expiring, and shop for what is actually missing — even when it has migrated to the back of the fridge.",
+          "The app turns a fuzzy household problem into a concrete daily loop: see what you have, use what is expiring, and shop for what is actually missing, even when it's migrated to the back of the fridge.",
           "Future directions include item scanning improvements and food-bank integration for surplus that still has life left.",
         ],
       },
     ],
     reflection: [
-      "Food waste is rarely a motivation problem — it is an awareness and coordination problem. Interviews with my mom and roommates made that concrete: once food slides out of sight, people need both inventory and expiration in one glance.",
+      "Food waste is rarely an issue caused by a lack of motivation. Interviews with my mom, roommates, and classmates made that concrete: once food slides out of sight, people need both inventory and expiration in one glance.",
     ],
     lessonsLearned: [
-      "Talk to the people who share your fridge — they will name the real friction faster than desk research.",
+      "Talk to the people who share your fridge, they'll name the real friction faster than desk research.",
       "Ground product ideas in a real household friction you have felt yourself.",
       "AI is most useful when it removes tedious data entry, not when it tries to cook for you.",
       "Inventory and grocery planning belong in one mental model.",
-    ],
-  },
-  {
-    slug: "ascendtials",
-    title: "ASCENDtials Website Redesign",
-    subtitle:
-      "Rebuilding trust, accessibility, and action flow for a community nonprofit",
-    role: "UX Design Intern",
-    timeline: "Internship · 2024",
-    team: "UX team + nonprofit stakeholders",
-    impact: "Redesigned roughly 95% of the organization website from scratch",
-    tags: ["Nonprofit", "Website Redesign", "Accessibility"],
-    heroImage: ascendImg,
-    imageFit: "contain",
-    externalUrl: "https://ascendtials.org",
-    sections: [
-      {
-        id: "problem",
-        title: "Problem",
-        content: [
-          "ASCENDtials needed a site that felt trustworthy and welcoming to community members — while still making events, programs, and key actions easy to find.",
-          "The existing experience did not clearly communicate the nonprofit’s mission or guide visitors toward the actions that matter most, like learning about programs or getting involved.",
-        ],
-      },
-      {
-        id: "research",
-        title: "Research",
-        content: [
-          "I collaborated with the UX team to understand stakeholder goals, review existing content, and identify where trust signals and accessibility were breaking down.",
-          "We paid special attention to visitors with mixed technical comfort levels — the site had to work for people of many backgrounds, not just digitally fluent users.",
-        ],
-      },
-      {
-        id: "insights",
-        title: "Insights",
-        content: [
-          "Trust is visual and structural: clear hierarchy, readable type, and obvious next steps matter as much as brand polish.",
-          "Accessibility could not be a late pass — it had to shape layout, contrast, and interaction from the start.",
-          "WordPress constraints meant design ambition had to stay implementable.",
-        ],
-      },
-      {
-        id: "opportunity",
-        title: "Opportunity",
-        content: [
-          "Create a donation-ready, event-forward website that feels warm and credible while remaining maintainable for a nonprofit team.",
-        ],
-      },
-      {
-        id: "design-process",
-        title: "Design Process",
-        content: [
-          "I created wireframes and mockups in Figma, then implemented pages with HTML, CSS, JavaScript, and WordPress.",
-          "Accessibility testing and feedback loops shaped revisions so the redesign stayed usable across devices and abilities.",
-        ],
-      },
-      {
-        id: "final-solution",
-        title: "Final Solution",
-        content: [
-          "A comprehensive UI/UX overhaul with restructured content, stronger trust signals, and clearer navigation toward events and community programs.",
-          "The live site at ascendtials.org reflects a more modern, user-focused presentation of the organization’s work.",
-        ],
-      },
-      {
-        id: "impact",
-        title: "Impact",
-        content: [
-          "Roughly 95% of the website was redesigned from scratch, giving ASCENDtials a clearer public face and a more accessible path into their programs.",
-        ],
-      },
-    ],
-    reflection: [
-      "Nonprofit design is service design: every page should reduce friction for someone trying to find help, offer help, or understand the mission.",
-    ],
-    lessonsLearned: [
-      "Accessibility and trust are product requirements, not polish.",
-      "Beautiful mockups only matter if they survive CMS and resource constraints.",
-      "Stakeholder collaboration is part of the design craft.",
     ],
   },
   {
@@ -469,23 +579,38 @@ export const caseStudies: CaseStudy[] = [
         id: "problem",
         title: "Problem",
         content: [
-          "UCSD’s Data Science Student Society needed a central hub where students could quickly find events, resources, and opportunities — without digging through a dense or outdated structure.",
-          "The previous experience made it hard for newcomers, members, faculty, and recruiters to understand what DS3 offered at a glance.",
+          "Full disclosure: This website has had some edits since these designs were created. However, this case study will follow the journey of the first redesign of the website for UCSD's DS3.",
+          "For this project, I was a part of a 12 person team, with 3 UX designers working closely with the DS3 leadership to redesign and rebuildthe website. When we first started working, the issue was clear. It was wordy, cluttered, and impossible to navigate quickly. UCSD’s Data Science Student Society needed a central hub where students could quickly find events, resources, and opportunities without digging through a dense or outdated structure.",
+        ],
+        images: [
+          {
+            src: ds3OldSite,
+            alt: "The previous DS3 homepage: a long paragraph over a crowd photo, with stats for articles, hackathon attendees, projects, and workshops.",
+            fit: "contain",
+          },
         ],
       },
       {
         id: "research",
         title: "Research",
         content: [
+          "The first step: Vision boarding. Each member of the UX team, including me, spent a week collecting inspiration from websites we came across. Scouring the internet, we researched what aspects of technical clubs call out to students the most, and how we could hone in on those. Additionally, we researched ways to stand out more to companies looking to recruit our members for work.",
           "We analyzed the existing site and gathered feedback on what students actually needed: upcoming events, ways to get involved, alumni proof, and a clearer sense of community.",
-          "I worked closely with DS3 leadership so the redesign stayed aligned with organizational goals, not just visual taste.",
+          "The, we worked closely with DS3 leadership so the redesign stayed aligned with organizational goals, not just visual taste.",
+        ],
+        images: [
+          {
+            src: ds3VisionBoard,
+            alt: "Vision board of student-org and technical-club websites used as research for the DS3 redesign.",
+            fit: "contain",
+          },
         ],
       },
       {
         id: "insights",
         title: "Insights",
         content: [
-          "Information architecture was the real product problem — students were failing to find content that already existed.",
+          "Information architecture was the real product problem, students were failing to find content that already existed.",
           "Different audiences needed different entry points: students want events; recruiters want credibility; members want resources.",
           "Rich media and galleries only help if the site still feels fast and scannable.",
         ],
@@ -502,6 +627,16 @@ export const caseStudies: CaseStudy[] = [
         title: "Design Process",
         content: [
           "Each UX teammate explored a Figma direction; we combined the strongest patterns into one cohesive system.",
+        ],
+        images: [
+          {
+            src: ds3Directions,
+            alt: "Side-by-side Figma directions from the UX team, from early wireframes to darker homepage explorations.",
+            fit: "contain",
+          },
+        ],
+        contentAfter: [
+          "Main edits: I focused on the organization of information on the main page, dividing our main events into 3 categories (Aligned with the Chevron branding). The focus was asking our users what questions they wanted answered the most. The categories were as following: Who we are. What we do, and How to get involved.",
           "I helped develop React components with TypeScript and Tailwind, and we brainstormed features like a dynamic calendar, alumni testimonials, and photo galleries.",
         ],
       },
@@ -509,8 +644,37 @@ export const caseStudies: CaseStudy[] = [
         id: "final-solution",
         title: "Final Solution",
         content: [
-          "A fully responsive React site that presents DS3 as a living campus community — with clearer paths to events, resources, and professional opportunities.",
+          "A fully responsive React site that presents DS3 as a living campus community, with clearer paths to events, resources, and professional opportunities.",
+          "A notifications system sits at the top of the event pages, so the next workshop or professional event is announced before a student scrolls.",
           "The redesign also became a foundation for partnering with other student organizations on custom branded sites.",
+        ],
+        imageLayout: "tight",
+        images: [
+          {
+            src: ds3Workshops,
+            alt: "Workshops page with an upcoming-event notification and a grid of past and upcoming workshops.",
+            fit: "contain",
+          },
+          {
+            src: ds3Professional,
+            alt: "Professional events page with the same upcoming-event notification, for internships, speakers, and networking.",
+            fit: "contain",
+          },
+          {
+            src: ds3Social,
+            alt: "Social events page for community mixers, study jams, and mentorship.",
+            fit: "contain",
+          },
+          {
+            src: ds3Datahacks,
+            alt: "DataHacks 2025 page with an application countdown and a past-years project showcase.",
+            fit: "contain",
+          },
+          {
+            src: ds3Projects,
+            alt: "Projects page for student builds with faculty and industry, including a project showcase.",
+            fit: "contain",
+          },
         ],
       },
       {
@@ -529,6 +693,120 @@ export const caseStudies: CaseStudy[] = [
       "IA work is often more valuable than visual restyling alone.",
       "Learning React in public is fine if the design system stays disciplined.",
       "Leadership alignment keeps student-org projects from drifting.",
+    ],
+  },
+  {
+    slug: "yipyap",
+    title: "YipYap",
+    subtitle:
+      "Early UX research and concept design for a conversation-first chat app",
+    role: "Lead UX Researcher & Concept Designer",
+    timeline: "Concept project · 2024",
+    team: "Early concept collaboration",
+    impact:
+      "Defined engagement patterns and prototype directions for a chat experience built to keep people talking",
+    tags: ["UX Research", "Concept Design", "Social"],
+    heroImage: yipyapImg,
+    imageFit: "contain",
+    sections: [
+      {
+        id: "problem",
+        title: "Problem",
+        content: [
+          "Most chat apps are optimized for utility messaging, just simple communication. YipYap started from a different idea: design for people who LOVE to “yap.” This was an idea generated by my boyfriend and I, two VERY chatty people",
+          "The early challenge was figuring out which interaction patterns reduce friction and invite longer, more playful exchanges - what would make this app better for people who want to talk more?",
+        ],
+      },
+      {
+        id: "research",
+        title: "Research",
+        content: [
+          "I led early UX research on chat preferences, looking at what makes conversations feel easy to start, fun to continue, and hard to abandon.",
+          "We explored conversation starters, animated feedback, and light gamification as ways to reward engagement without turning chat into a chore.",
+          "The main finding? Seems obvious, but the main conversation killer comes from running out of things to say.",
+        ],
+        images: [
+          {
+            src: yipyapFriends,
+            alt: "Greyscale YipYap friends screen, with a session list and yappers you can message, call, or video.",
+            fit: "contain",
+          },
+        ],
+      },
+      {
+        id: "insights",
+        title: "Insights",
+        content: [
+          "High-engagement chat needs lower startup friction and more expressive feedback than standard messaging UIs provide.",
+          "Fun features only work when they support conversation instead of competing with it.",
+          "Early research mattered more than visual polish at this stage, the product was still finding its behavior. So, the focus was on the design itself, made in greyscale to focus on what mattered most at the time: the flow",
+        ],
+      },
+      {
+        id: "opportunity",
+        title: "Opportunity",
+        content: [
+          "Shape a conversation-first concept where UI patterns actively encourage people to keep talking.",
+          "The main feature: AI generated conversation starters/continuers, to help the yapping flow. These starters are generated based on the earlier conversation history, bringing up new topics in an innovative way.",
+        ],
+        images: [
+          {
+            src: yipyapOverview,
+            alt: "Greyscale design overview of YipYap: home, settings, friends, edit profile, and an in-chat prompt.",
+            fit: "contain",
+          },
+        ],
+      },
+      {
+        id: "design-process",
+        title: "Design Process",
+        content: [
+          "I developed interactive prototypes in Figma, tested directions with potential users, and we iterated on the engagement patterns that felt most natural.",
+          "The next step was to work out the minor detail I had skimmed over before: the color palette. The goal was to be bright and playful, using neutral yellow and green tones, which my research had shown were the ideal colors to balance comfort and clarity.",
+        ],
+        images: [
+          {
+            src: yipyapPalette,
+            alt: "YipYap palette: sage, pale green, cream, warm ivory, and tan.",
+            fit: "contain",
+          },
+        ],
+      },
+      {
+        id: "final-solution",
+        title: "Final Solution",
+        content: [
+          "Eventually, though, we decided to focus more on a minimalistic, dark toned color scheme, keeping the app clean and focused on the conversation.",
+          "Overall, YipYap is a conceptual chat experience with UI ideas designed around high-engagement, always keeping the conversation going.",
+        ],
+        images: [
+          {
+            src: yipyapFinal,
+            alt: "Dark YipYap friends view, with session list and yapper cards for messaging, calling, or video.",
+            fit: "contain",
+          },
+          {
+            src: yipyapFinal2,
+            alt: "Dark YipYap chat with a group thread and suggested replies when you do not know what to say.",
+            fit: "contain",
+          },
+        ],
+      },
+      {
+        id: "impact",
+        title: "Impact",
+        content: [
+          "The project established a research-backed concept direction and a set of interaction hypotheses for a chat product built around delight and continuity, not just message delivery.",
+        ],
+      },
+    ],
+    reflection: [
+      "Social products live or die on micro-interactions. Research has to study feelings in the thread, not just feature checklists.",
+    ],
+    lessonsLearned: [
+      "Lead with research when the product behavior is still undefined.",
+      "Engagement features need a clear conversational job.",
+      "Concept work is valuable when it produces testable interaction patterns.",
     ],
   },
   {
@@ -609,159 +887,82 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "studybuddy",
-    title: "Study Buddy",
+    slug: "ascendtials",
+    title: "ASCENDtials Website Redesign",
     subtitle:
-      "An AI learning flow that coaches reasoning instead of handing over answers",
-    role: "Product Designer & Developer",
-    timeline: "Academic / personal build · 2025",
-    team: "Small collaborative build",
-    impact:
-      "Designed a Socratic AI experience that keeps students in the thinking loop",
-    tags: ["EdTech", "Human-AI Interaction", "Product Design"],
-    heroImage: studybuddyImg,
+      "Rebuilding trust, accessibility, and action flow for a community nonprofit",
+    role: "UX Design Intern",
+    timeline: "Internship · 2024",
+    team: "UX team + nonprofit stakeholders",
+    impact: "Redesigned roughly 95% of the organization website from scratch",
+    tags: ["Nonprofit", "Website Redesign", "Accessibility"],
+    heroImage: ascendImg,
     imageFit: "contain",
+    externalUrl: "https://ascendtials.org",
     sections: [
       {
         id: "problem",
         title: "Problem",
         content: [
-          "Most AI study tools optimize for speed to an answer. That can feel helpful in the moment and still undermine learning — students copy outputs instead of building understanding.",
-          "The design question was how to keep AI useful without making critical thinking optional.",
+          "ASCENDtials needed a site that felt trustworthy and welcoming to community members — while still making events, programs, and key actions easy to find.",
+          "The existing experience did not clearly communicate the nonprofit’s mission or guide visitors toward the actions that matter most, like learning about programs or getting involved.",
         ],
       },
       {
         id: "research",
         title: "Research",
         content: [
-          "I looked at how strong teachers use questions to guide discovery, then translated that into an interaction model for an AI tutor.",
-          "The product needed to feel conversational and supportive while refusing to collapse into answer dumping.",
+          "I collaborated with the UX team to understand stakeholder goals, review existing content, and identify where trust signals and accessibility were breaking down.",
+          "We paid special attention to visitors with mixed technical comfort levels — the site had to work for people of many backgrounds, not just digitally fluent users.",
         ],
       },
       {
         id: "insights",
         title: "Insights",
         content: [
-          "Guided prompts work when each step asks the student to contribute reasoning, not just confirm an AI guess.",
-          "The UI has to make the dialogue feel calm and focused — complexity belongs in the model behavior, not the chrome.",
-          "Trust depends on the system feeling like a coach, not a cheat sheet.",
+          "Trust is visual and structural: clear hierarchy, readable type, and obvious next steps matter as much as brand polish.",
+          "Accessibility could not be a late pass — it had to shape layout, contrast, and interaction from the start.",
+          "WordPress constraints meant design ambition had to stay implementable.",
         ],
       },
       {
         id: "opportunity",
         title: "Opportunity",
         content: [
-          "Craft a guided learning experience where AI prompts support critical thinking step by step.",
+          "Create a donation-ready, event-forward website that feels warm and credible while remaining maintainable for a nonprofit team.",
         ],
       },
       {
         id: "design-process",
         title: "Design Process",
         content: [
-          "I designed wireframes and interactive prototypes in Figma, then helped build a responsive frontend with Next.js and Tailwind.",
-          "A Flask backend handled AI-driven prompts so the conversation could adapt to student input while staying in a Socratic pattern.",
+          "I created wireframes and mockups in Figma, then implemented pages with HTML, CSS, JavaScript, and WordPress.",
+          "Accessibility testing and feedback loops shaped revisions so the redesign stayed usable across devices and abilities.",
         ],
       },
       {
         id: "final-solution",
         title: "Final Solution",
         content: [
-          "Study Buddy is an AI-powered learning system that walks students through concepts with guiding questions tailored to their input.",
-          "The experience prioritizes active learning: the product’s job is to scaffold thinking, not replace it.",
+          "A comprehensive UI/UX overhaul with restructured content, stronger trust signals, and clearer navigation toward events and community programs.",
+          "The live site at ascendtials.org reflects a more modern, user-focused presentation of the organization’s work.",
         ],
       },
       {
         id: "impact",
         title: "Impact",
         content: [
-          "The project became a concrete exploration of human-AI interaction in education — showing how prompt design and UX together can protect agency while still offering support.",
+          "Roughly 95% of the website was redesigned from scratch, giving ASCENDtials a clearer public face and a more accessible path into their programs.",
         ],
       },
     ],
     reflection: [
-      "In learning products, the most ethical AI feature is often the one that withholds the answer a little longer.",
+      "Nonprofit design is service design: every page should reduce friction for someone trying to find help, offer help, or understand the mission.",
     ],
     lessonsLearned: [
-      "Interaction design and prompt design are the same craft in AI tutors.",
-      "Students need scaffolding, not shortcuts dressed up as help.",
-      "Restraint can be the product differentiator.",
-    ],
-  },
-  {
-    slug: "yipyap",
-    title: "YipYap",
-    subtitle:
-      "Early UX research and concept design for a conversation-first chat app",
-    role: "Lead UX Researcher & Concept Designer",
-    timeline: "Concept project · 2024",
-    team: "Early concept collaboration",
-    impact:
-      "Defined engagement patterns and prototype directions for a chat experience built to keep people talking",
-    tags: ["UX Research", "Concept Design", "Social"],
-    heroImage: yipyapImg,
-    imageFit: "contain",
-    sections: [
-      {
-        id: "problem",
-        title: "Problem",
-        content: [
-          "Most chat apps are optimized for utility messaging. YipYap started from a different brief: design for people who actually want to stay in conversation — to “yap.”",
-          "The early challenge was figuring out which interaction patterns reduce friction and invite longer, more playful exchanges.",
-        ],
-      },
-      {
-        id: "research",
-        title: "Research",
-        content: [
-          "I led early UX research on chat preferences, looking at what makes conversations feel easy to start, fun to continue, and hard to abandon.",
-          "We explored conversation starters, animated feedback, and light gamification as ways to reward engagement without turning chat into a chore.",
-        ],
-      },
-      {
-        id: "insights",
-        title: "Insights",
-        content: [
-          "High-engagement chat needs lower startup friction and more expressive feedback than standard messaging UIs provide.",
-          "Fun features only work when they support conversation instead of competing with it.",
-          "Early research mattered more than visual polish at this stage — the product was still finding its behavior.",
-        ],
-      },
-      {
-        id: "opportunity",
-        title: "Opportunity",
-        content: [
-          "Shape a conversation-first concept where UI patterns actively encourage people to keep talking.",
-        ],
-      },
-      {
-        id: "design-process",
-        title: "Design Process",
-        content: [
-          "I developed interactive prototypes in Figma, tested directions with potential users, and iterated on the engagement patterns that felt most natural.",
-        ],
-      },
-      {
-        id: "final-solution",
-        title: "Final Solution",
-        content: [
-          "YipYap is a conceptual chat experience with UI ideas designed around high-engagement conversation — from expressive indicators to prompts that help people keep the thread going.",
-        ],
-      },
-      {
-        id: "impact",
-        title: "Impact",
-        content: [
-          "The project established a research-backed concept direction and a set of interaction hypotheses for a chat product built around delight and continuity, not just message delivery.",
-        ],
-      },
-    ],
-    reflection: [
-      "Social products live or die on micro-interactions. Research has to study feelings in the thread, not just feature checklists.",
-    ],
-    lessonsLearned: [
-      "Lead with research when the product behavior is still undefined.",
-      "Engagement features need a clear conversational job.",
-      "Concept work is valuable when it produces testable interaction patterns.",
+      "Accessibility and trust are product requirements, not polish.",
+      "Beautiful mockups only matter if they survive CMS and resource constraints.",
+      "Stakeholder collaboration is part of the design craft.",
     ],
   },
   {

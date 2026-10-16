@@ -186,7 +186,7 @@ export function Ds3CaseStudy() {
               Student Society
             </h1>
             <p className="mt-6 max-w-[36rem] text-[1.125rem] leading-relaxed">
-              A year of making DS3 more educational, more relatable, and harder to scroll past. Chat is this aura?
+              A year of making DS3 more educational, more relatable, and harder to scroll past. 
             </p>
           </motion.div>
 

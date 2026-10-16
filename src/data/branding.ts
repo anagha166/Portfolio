@@ -78,9 +78,11 @@ export const brandingOrgs: BrandingOrg[] = [
     shortName: 'Raas Ruckus',
     logoSrc: rrLogo,
     summary:
-      'Identity and show-facing brand work for UCSD’s competitive Raas team, from mark to stage.',
+      'Production design for Raas Ruckus: a competition flag, a season logo, and a sponsorship packet in a bright Indian graphic language.',
+    published: true,
+    highlight: 'Flag, season logo, and sponsorship packet.',
     approach:
-      'RR work spans lasting team identity (logo, flag, sponsorship) and a fuller theme world for performance season.',
+      'Indian motifs and a bright palette, built for a national stage: the flag in the stands, the season mark, and the packet that funds the set.',
     sections: [
       {
         id: 'logo',
