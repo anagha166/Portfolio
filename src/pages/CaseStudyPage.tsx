@@ -28,10 +28,10 @@ export function CaseStudyPage() {
       <div className="mx-auto max-w-6xl">
         <CaseStudyHero study={study} />
 
-        <div className="mt-24 grid gap-12 lg:grid-cols-[11rem_minmax(0,1fr)] lg:gap-16">
+        <div className="mt-24 lg:grid lg:grid-cols-[8.75rem_minmax(0,1fr)_8.75rem] lg:gap-x-6">
           <StickyTOC items={tocItems} />
 
-          <div className="min-w-0 max-w-4xl space-y-20">
+          <div className="min-w-0 space-y-20">
             {study.sections.map((section) => (
               <CaseStudySection key={section.id} section={section} />
             ))}
@@ -48,7 +48,7 @@ export function CaseStudyPage() {
                   {study.reflection.map((paragraph) => (
                     <p
                       key={paragraph.slice(0, 40)}
-                      className="max-w-[38rem] text-[1.0625rem] leading-[1.75] text-black/75"
+                      className="text-[1.0625rem] leading-[1.75] text-black/75"
                     >
                       {paragraph}
                     </p>
@@ -74,7 +74,7 @@ export function CaseStudyPage() {
                       >
                         {String(i + 1).padStart(2, '0')}
                       </span>
-                      <p className="max-w-[34rem] text-[1.0625rem] leading-[1.75] text-black/75">
+                      <p className="text-[1.0625rem] leading-[1.75] text-black/75">
                         {lesson}
                       </p>
                     </li>
@@ -83,6 +83,7 @@ export function CaseStudyPage() {
               </section>
             )}
           </div>
+          <div className="hidden lg:block" aria-hidden="true" />
         </div>
       </div>
     </motion.article>

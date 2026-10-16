@@ -82,7 +82,7 @@ const graphics = [
 
 function Prose({ children }: { children: ReactNode }) {
   return (
-    <div className="mt-6 max-w-[38rem] space-y-5 text-[1.0625rem] leading-[1.75]">{children}</div>
+    <div className="mt-6 space-y-5 text-[1.0625rem] leading-[1.75]">{children}</div>
   )
 }
 
@@ -218,10 +218,10 @@ export function Ds3CaseStudy() {
           </div>
         </header>
 
-        <div className="mt-24 grid gap-12 lg:grid-cols-[11rem_minmax(0,1fr)] lg:gap-16">
+        <div className="mt-24 lg:grid lg:grid-cols-[8.75rem_minmax(0,1fr)_8.75rem] lg:gap-x-6">
           <StickyTOC items={toc} />
 
-          <div className="min-w-0 max-w-4xl space-y-20">
+          <div className="min-w-0 space-y-20">
             <Section id="brief" index="01" title="The brief">
               <Prose>
                 <p>
@@ -270,7 +270,7 @@ export function Ds3CaseStudy() {
                   internships, art, food, and people, and closes on the fall GBM. 
                 </p>
               </Prose>
-              <div className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-3">
+              <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-3">
                 {graphics.map((piece) => (
                   <Shot
                     key={piece.src}
@@ -289,7 +289,7 @@ export function Ds3CaseStudy() {
                   Two pieces of motion, generating hype and engagement for our organization. Directed by me and edited on Capcut.
                 </p>
               </Prose>
-              <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2 sm:items-start">
+              <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-start">
                 <Reel
                   src={fallGbm}
                   label="Fall GBM promo reel for 2025 to 2026"
@@ -315,7 +315,7 @@ export function Ds3CaseStudy() {
                   event reminder.
                 </p>
               </Prose>
-              <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2 sm:items-start">
+              <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-start">
                 <Shot
                   src={quizStory}
                   alt="Instagram story quiz on code tracing, with a recursive function and live poll results."
@@ -358,6 +358,7 @@ export function Ds3CaseStudy() {
               </Prose>
             </section>
           </div>
+          <div className="hidden lg:block" aria-hidden="true" />
         </div>
       </div>
     </motion.article>

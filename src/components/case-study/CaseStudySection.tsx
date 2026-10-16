@@ -34,7 +34,7 @@ export function CaseStudySection({ section }: CaseStudySectionProps) {
         {section.content.map((paragraph) => (
           <p
             key={paragraph.slice(0, 40)}
-            className="max-w-[38rem] text-[1.0625rem] leading-[1.75] text-black/75"
+            className="text-[1.0625rem] leading-[1.75] text-black/75"
           >
             {renderParagraphWithHoverPreviews(paragraph, section.hoverPreviews)}
           </p>
@@ -61,7 +61,7 @@ export function CaseStudySection({ section }: CaseStudySectionProps) {
           {section.contentAfter.map((paragraph) => (
             <p
               key={paragraph.slice(0, 40)}
-              className="max-w-[38rem] text-[1.0625rem] leading-[1.75] text-black/75"
+              className="text-[1.0625rem] leading-[1.75] text-black/75"
             >
               {renderParagraphWithHoverPreviews(paragraph, section.hoverPreviews)}
             </p>

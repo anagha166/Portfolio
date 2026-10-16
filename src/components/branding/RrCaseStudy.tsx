@@ -50,7 +50,7 @@ const packet = [
 
 function Prose({ children }: { children: ReactNode }) {
   return (
-    <div className="mt-6 max-w-[38rem] space-y-5 text-[1.0625rem] leading-[1.75]">{children}</div>
+    <div className="mt-6 space-y-5 text-[1.0625rem] leading-[1.75]">{children}</div>
   )
 }
 
@@ -153,10 +153,10 @@ export function RrCaseStudy() {
           </dl>
         </header>
 
-        <div className="mt-24 grid gap-12 lg:grid-cols-[11rem_minmax(0,1fr)] lg:gap-16">
+        <div className="mt-24 lg:grid lg:grid-cols-[8.75rem_minmax(0,1fr)_8.75rem] lg:gap-x-6">
           <StickyTOC items={toc} />
 
-          <div className="min-w-0 max-w-4xl space-y-20">
+          <div className="min-w-0 space-y-20">
             <Section id="brief" index="01" title="The brief">
               <Prose>
                 <p>
@@ -255,6 +255,7 @@ export function RrCaseStudy() {
               </Prose>
             </section>
           </div>
+          <div className="hidden lg:block" aria-hidden="true" />
         </div>
       </div>
     </motion.article>

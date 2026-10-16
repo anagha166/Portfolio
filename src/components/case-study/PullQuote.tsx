@@ -8,7 +8,7 @@ interface PullQuoteProps {
 export function PullQuote({ quote }: PullQuoteProps) {
   return (
     <motion.blockquote
-      className="my-12 max-w-[34rem]"
+      className="my-12"
       initial={{ opacity: 0, y: 8 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-10%' }}
