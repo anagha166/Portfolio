@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { fadeTransition, pageVariants } from '@/animations/transitions'
 import { StickyTOC } from '@/components/case-study/StickyTOC'
-import mark from '@/assets/my_photos/marketing/DS3/DS3.png'
 import summer1 from '@/assets/my_photos/marketing/DS3/SummerGraphic1.png'
 import summer2 from '@/assets/my_photos/marketing/DS3/SummerGraphic2.png'
 import summer3 from '@/assets/my_photos/marketing/DS3/SummerGraphic3.png'
@@ -22,7 +21,6 @@ import internPanel from '@/assets/my_photos/marketing/DS3/Intern_Panel.mov'
 
 const toc = [
   { id: 'brief', title: 'The brief' },
-  { id: 'brand', title: 'Technical brand' },
   { id: 'stickers', title: 'Datasaur' },
   { id: 'graphics', title: 'Instagram graphics' },
   { id: 'reels', title: 'Reels' },
@@ -252,39 +250,10 @@ export function Ds3CaseStudy() {
               </blockquote>
             </Section>
 
-            <Section id="brand" index="02" title="A technical brand">
+            <Section id="stickers" index="02" title="Datasaur, stuck on the site">
               <Prose>
                 <p>
-                  Two anchors hold the identity. Datasaur is the character, an orange dinosaur that
-                  can sit in a text thread, on a sticker, or in a story and still be DS3. The
-                  chevron is the technical mark: orange over teal, the same shape that shows up on
-                  Datasaur and on the monitors in the sticker set.
-                </p>
-                <p>
-                  I didn’t replace either of them. I used them harder. Computer chrome does the rest.
-                  Messages, browser windows, folders, circuit boards. A post can be casual and still
-                  read as technical, because it looks like it was made on a laptop.
-                </p>
-              </Prose>
-              <img
-                src={mark}
-                alt="DS3 chevron mark, orange over teal on black."
-                width={370}
-                height={374}
-                className="mt-10 h-auto w-full max-w-[16rem]"
-              />
-            </Section>
-
-            <Section id="stickers" index="03" title="Datasaur, stuck on the site">
-              <Prose>
-                <p>
-                  The stickers are how the character lives on the website. They’re dinosaur-themed
-                  on purpose: Datasaur with boba, a pumpkin that just says DS3, a co-op game, a mic,
-                  a cape. Student life, not a mascot style guide.
-                </p>
-                <p>
-                  The spots and the chevron keep every one of them in the system. On the site they
-                  work as a face for the brand, so DS3 isn’t only a logo in the header.
+                  Datasaur: The offical mascot of DS3, incorpirating the organizations colors, logo, and branding. Stickers handrawn on Procreate, to be both printed on stickers and attached to websites/graphics.
                 </p>
               </Prose>
               <div className="mt-10 space-y-8">
@@ -303,7 +272,7 @@ export function Ds3CaseStudy() {
               </div>
             </Section>
 
-            <Section id="graphics" index="04" title="Instagram graphics">
+            <Section id="graphics" index="03" title="Instagram graphics">
               <Prose>
                 <p>
                   The feed runs on one technical theme. Messages, browser windows, folders, a cursor.
@@ -329,12 +298,10 @@ export function Ds3CaseStudy() {
               </div>
             </Section>
 
-            <Section id="reels" index="05" title="Reels">
+            <Section id="reels" index="04" title="Reels">
               <Prose>
                 <p>
-                  Two pieces of motion, for the moments a still can’t carry. The fall GBM promo, and
-                  the intern panel the summer thread was already pointing at: members on research,
-                  internships, and the year they just had.
+                  Two pieces of motion, generating hype and engagement for our organization. Directed by me and edited on Capcut.
                 </p>
               </Prose>
               <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2 sm:items-start">
@@ -351,7 +318,7 @@ export function Ds3CaseStudy() {
               </div>
             </Section>
 
-            <Section id="quizzes" index="06" title="Instagram quizzes">
+            <Section id="quizzes" index="05" title="Instagram quizzes">
               <Prose>
                 <p>
                   The educational brief needed a format people would actually tap. I built a quiz
