@@ -474,7 +474,6 @@ export const caseStudies: CaseStudy[] = [
     tags: ["Mobile", "Product Design", "Human-AI Interaction"],
     heroImage: bitefreshImg,
     imageFit: "contain",
-    externalUrl: "https://github.com/anagha166/BiteFresh",
     sections: [
       {
         id: "problem",
