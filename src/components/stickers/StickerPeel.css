@@ -168,6 +168,7 @@
 .sticker-main,
 .flap {
   overflow: hidden;
+  opacity: 0.62;
   will-change: clip-path, transform;
 }
 
