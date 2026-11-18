@@ -37,7 +37,7 @@ const facts = [
 
 const metrics = [
   { value: '137.2k', label: 'Views', detail: 'Added in the past month' },
-  { value: '+30%', label: 'Followers', detail: 'Over the last year' },
+  { value: '+40%', label: 'Followers', detail: 'Over the last year' },
   { value: '+50%', label: 'Story engagement', detail: 'From the story quizzes' },
 ]
 
