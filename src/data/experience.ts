@@ -43,7 +43,7 @@ export const experienceItems: ExperienceItem[] = [
   {
     id: 'ds3-marketing',
     period: 'June 2025 — Present',
-    role: 'Marketing Director',
+    role: 'Marketing Lead',
     company: 'Data Science Student Society (DS3) — UC San Diego',
     location: 'San Diego, CA',
     points: [

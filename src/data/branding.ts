@@ -42,7 +42,7 @@ export const brandingOrgs: BrandingOrg[] = [
     summary:
       'Marketing direction for DS3: a technical brand, campaigns that sound like people, and a feed with more aura.',
     published: true,
-    highlight: '137.2k views in a month. Followers up 30%.',
+    highlight: '137.2k views in a month. Followers up 40%.',
     approach:
       'The work uses Datasaur and the chevron mark, then builds campaigns on computer surfaces so the org feels technical and human at the same time.',
     sections: [

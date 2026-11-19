@@ -29,7 +29,7 @@ const toc = [
 ]
 
 const facts = [
-  { label: 'Role', value: 'Marketing Director' },
+  { label: 'Role', value: 'Marketing Lead' },
   { label: 'Organization', value: 'DS3, UC San Diego' },
   { label: 'Timeline', value: 'June 2025 — Present' },
   { label: 'Channel', value: 'Instagram' },
@@ -229,7 +229,7 @@ export function Ds3CaseStudy() {
                   view. The feed read like a bulletin board: dates, rooms, and a logo in the corner.
                 </p>
                 <p>
-                  I stepped in as Marketing Director in June 2025 with a brief I wrote for myself.
+                  I stepped in as Marketing Lead in June 2025 with a brief I wrote for myself.
                   Make the content more educational. Make it more relatable,
                   so a technical college org could feel like somewhere you actually wanted to be.
                 </p>
@@ -340,10 +340,11 @@ export function Ds3CaseStudy() {
               </h2>
               <Prose>
                 <p>
-                  The director job was taste, repeated. Datasaur and the chevron, computer surfaces,
-                  a voice that sounds like the org, and posts that teach something when they can.
-                  The numbers followed from that: 137.2k views in a month, a following up 30% over
-                  the year, and a story format people finish.
+                  This role has been a deep dive into learning how branding relies on consistency
+                  and creating something unique. Datasaur and the chevron, computer surfaces, a
+                  voice that sounds like the org, and posts that teach something when they can. The
+                  numbers followed from that: 137.2k views in a month, a following up 40% over the
+                  year, and a story format people finish.
                 </p>
                 <p>
                   <a
